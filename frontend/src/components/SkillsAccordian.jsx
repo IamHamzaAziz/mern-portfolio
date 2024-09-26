@@ -16,7 +16,7 @@ const SkillsAccordian = () => {
           Frontend
         </AccordionSummary>
         <AccordionDetails>
-          React JS, Tailwind CSS, Bootstrap & Ajax
+          React JS, TypeScript, ShadCN, Tailwind CSS, Bootstrap & AJAX
         </AccordionDetails>
       </Accordion>
 
@@ -29,7 +29,7 @@ const SkillsAccordian = () => {
           Backend
         </AccordionSummary>
         <AccordionDetails>
-          Node JS, Express, Django & Django REST Framework
+          Node JS, Express, Django, Django REST Framework & Firebase
         </AccordionDetails>
       </Accordion>
 
@@ -39,7 +39,7 @@ const SkillsAccordian = () => {
           aria-controls="panel3-content"
           id="panel3-header"
         >
-          Database
+          Databases
         </AccordionSummary>
         <AccordionDetails>
           MongoDB, MySQL, MS SQL Server & SQLite
