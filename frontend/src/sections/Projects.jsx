@@ -10,7 +10,7 @@ const Projects = () => {
         <span>Key Projects</span>
       </h1>
 
-      <div className='w-full sm:w-3/4 mx-auto mt-14'>
+      <div className='hidden sm:block w-3/4 mx-auto mt-14'>
         <Marquee pauseOnHover={true} speed={60}>
           <SingleProject
             title={'Real Estate Website'}
@@ -33,6 +33,35 @@ const Projects = () => {
           <SingleProject
             title={'Recipe Sharing App'}
             description={'This web application enables users to share and save recipes, similar to saving posts on social media platforms. It features user authentication, CRUD operations, and image uploads. Users can also apply filters to find specific recipes. For enhanced security, UUIDs were used instead of regular IDs. The project was built using Django and styled with Tailwind CSS.'}
+            githubLink={'https://github.com/IamHamzaAziz/flavor-quest-django'}
+            className='border-blue-600 hover:shadow-blue-600'
+          />
+        </Marquee>
+      </div>
+
+      <div className='block sm:hidden w-full mx-auto mt-14'>
+        <Marquee pauseOnHover={true} speed={60}>
+          <SingleProject
+            title={'Real Estate Website'}
+            description={'MERN app for creating and managing blogs, with JWT authentication and a rich text editor. Read more at below link.'}
+            githubLink={'https://github.com/IamHamzaAziz/real-estate-website-mern'}
+            className='border-slate-500 hover:shadow-slate-600'
+          />
+          <SingleProject
+            title={'Blogs App'}
+            description={'MERN app for creating and managing blogs, with JWT authentication and a rich text editor. Read more at below link.'}
+            githubLink={'https://github.com/IamHamzaAziz/blogging-website-mern'}
+            className='border-red-600 hover:shadow-red-600'
+          />
+          <SingleProject
+            title={'Events App'}
+            description={'A React and Django app for managing events, with search and filtering features. Read more at below link.'}
+            githubLink={'https://github.com/IamHamzaAziz/events-webapp-django-react'}
+            className='border-green-600 hover:shadow-green-600'
+          />
+          <SingleProject
+            title={'Recipe Sharing App'}
+            description={'A recipe-sharing platform with authentication, CRUD, and filtering, built using Django. Read more at below link.'}
             githubLink={'https://github.com/IamHamzaAziz/flavor-quest-django'}
             className='border-blue-600 hover:shadow-blue-600'
           />
