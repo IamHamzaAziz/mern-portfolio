@@ -1,2 +1,13 @@
-This is my portfolio website's repository which I developed using MERN Stack.
-<br>You can visit this portfolio at [hamzaaziz-portfolio.vercel.app](https://hamzaaziz-portfolio.vercel.app/)
+# My Portfolio Website
+
+Welcome to my personal portfolio website's repository.
+<br>You can visit the portfolio at [hamzaaziz-portfolio.vercel.app](https://hamzaaziz-portfolio.vercel.app/)
+
+## Sections
+
+This portofolio features following sections
+
+- **Home**: Introduction with typing animations.
+- **Projects**: A sliding showcase of my work.
+- **Skills**: Technologies I excel in.
+- **Contact**: A form for sending direct inquiries. I get an email right after you fill out this form. This email tells me your name, email and message you entered.
