@@ -35,7 +35,7 @@ app.post("/api/contact-message", async (req, res) => {
       return res.status(201).json("Enter a valid email");
     }
 
-    const newMessage = await messageModel.create({
+    await messageModel.create({
       name: name,
       email: email,
       message: message,
