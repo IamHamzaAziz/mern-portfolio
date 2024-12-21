@@ -9,7 +9,7 @@ const SkillsAccordian = () => {
     <div className='w-4/5 sm:w-3/4 mx-auto mt-16'>
       <Accordion className='bg-gray-800 text-white'>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
+          expandIcon={<ExpandMoreIcon style={{ color: 'white' }} />}
           aria-controls="panel1-content"
           id="panel1-header"
         >
@@ -22,20 +22,20 @@ const SkillsAccordian = () => {
 
       <Accordion className='bg-gray-800 text-white'>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
+          expandIcon={<ExpandMoreIcon style={{ color: 'white' }} />}
           aria-controls="panel2-content"
           id="panel2-header"
         >
           Backend
         </AccordionSummary>
         <AccordionDetails>
-          Node JS, Express, Django, Django REST Framework & Firebase
+          Node JS, Express, Laravel, Django & Firebase
         </AccordionDetails>
       </Accordion>
 
       <Accordion className='bg-gray-800 text-white'>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
+          expandIcon={<ExpandMoreIcon style={{ color: 'white' }} />}
           aria-controls="panel3-content"
           id="panel3-header"
         >
@@ -48,7 +48,7 @@ const SkillsAccordian = () => {
 
       <Accordion className='bg-gray-800 text-white'>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
+          expandIcon={<ExpandMoreIcon style={{ color: 'white' }} />}
           aria-controls="panel3-content"
           id="panel3-header"
         >
