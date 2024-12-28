@@ -11,29 +11,12 @@ const Hero = () => {
                 className="rounded-full h-48 w-48 border-2 border-gray-200"
             />
 
-            <h1 className='text-3xl hidden sm:block font-bold text-center mt-8 bg-gradient-to-r from-gray-200 to-gray-500 bg-clip-text text-transparent'>
+            <h1 className='text-xl font-bold text-center mt-8 bg-gradient-to-r from-gray-200 to-gray-500 bg-clip-text text-transparent'>
                 Hi, I'm Hamza Aziz<br />
                 <TypeAnimation
                     sequence={[
-                        'I\'m a Full Stack Website Developer',
+                        'I\'m a Software Engineer',
                         2000,
-                        'I\'m a MERN Developer',
-                        1000,
-                        'I\'m a Laravel Developer',
-                        1000,
-                        'I\'m a Django Developer',
-                        1000
-                    ]}
-                    wrapper="span"
-                    speed={50}
-                    repeat={Infinity}
-                />
-            </h1>
-
-            <h1 className='text-xl block sm:hidden font-bold text-center mt-8 bg-gradient-to-r from-gray-200 to-gray-500 bg-clip-text text-transparent'>
-                Hi, I'm Hamza Aziz<br />
-                <TypeAnimation
-                    sequence={[
                         'I\'m a MERN Developer',
                         1000,
                         'I\'m a Laravel Developer',
