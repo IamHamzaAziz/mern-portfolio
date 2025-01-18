@@ -4,7 +4,7 @@ import { TypeAnimation } from 'react-type-animation'
 
 const Hero = () => {
     return (
-        <div className='flex flex-col items-center mt-16 mx-2 pb-20 border-b border-gray-700 rounded-ee-[50px] rounded-es-[50px] sm:rounded-ee-[125px] sm:rounded-es-[125px]'>
+        <div className='flex flex-col items-center mt-16 mx-2 pb-20 section-border-bottom'>
             <img
                 src={hero_image}
                 alt="me"

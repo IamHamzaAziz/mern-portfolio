@@ -66,7 +66,7 @@ const Contact = () => {
     }
 
     return (
-        <div className='py-20 border-b border-gray-700 rounded-ee-[50px] rounded-es-[50px] sm:rounded-ee-[125px] sm:rounded-es-[125px]'>
+        <div className='py-20 section-border-bottom'>
             <h1 className='text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-square-text h-7 w-7 sm:h-10 sm:w-10"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /><path d="M13 8H7" /><path d="M17 12H7" /></svg>
                 <span>Contact Me</span>

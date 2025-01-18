@@ -22,7 +22,7 @@ const Education = () => {
     const [hoveredIndex, setHoveredIndex] = useState()
 
     return (
-        <div className='py-20 border-b border-gray-700 rounded-ee-[50px] rounded-es-[50px] sm:rounded-ee-[125px] sm:rounded-es-[125px]'>
+        <div className='py-20 section-border-bottom'>
             <div className="container mx-auto px-10">
                 <h1 className='text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-graduation-cap h-7 w-7 sm:h-10 sm:w-10"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
