@@ -25,7 +25,7 @@ const Skills = () => {
         <span>Key Skills</span>
       </h1>
 
-      <div className="w-3/4 md:w-1/2 mx-auto mt-10 flex flex-wrap justify-center items-center gap-4">
+      <div className="w-3/4 md:w-1/2 mx-auto mt-14 flex flex-wrap justify-center items-center gap-4">
         {
           skills.map((icon, index) => (
             <div key={index} className="relative group cursor-pointer">

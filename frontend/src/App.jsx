@@ -5,6 +5,7 @@ import Projects from './sections/Projects'
 import Skills from './sections/Skills'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
+import Education from './sections/Education'
 import { Analytics } from "@vercel/analytics/react"
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <Projects />
       <Skills />
+      <Education />
       <Contact />
       <Footer />
       <Analytics />
