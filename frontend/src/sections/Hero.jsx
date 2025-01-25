@@ -11,8 +11,8 @@ const Hero = () => {
                 className="rounded-full h-48 w-48 border-2 border-gray-200"
             />
 
-            <h1 className='text-xl sm:text-3xl font-bold text-center mt-8 bg-gradient-to-r from-gray-200 to-gray-500 bg-clip-text text-transparent'>
-                Hi, I'm Hamza Aziz<br />
+            <h1 className='text-xl sm:text-3xl font-bold text-center mt-8'>
+                Hi, I'm <span className='bg-gradient-to-r from-gray-500 via-gray-50 to-gray-500 bg-clip-text text-transparent'>Hamza Aziz</span><br />
                 <TypeAnimation
                     sequence={[
                         'I\'m a Software Engineer',
