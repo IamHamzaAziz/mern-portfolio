@@ -16,31 +16,31 @@ const Projects = () => {
             title={'Real Estate Website'}
             description={'This website is developed using MERN stack, Shadcn UI components and TypeScript in frontend. It has OTP-based user authentication and password reset. The site lists properties with images and details like address, area, and city, allowing users to filter and save listings. Rich text descriptions for properties and blogs were implemented with React Quill. Additionally, the platform includes a contact form and an admin panel for managing properties, blogs, messages, and users.'}
             githubLink={'https://github.com/IamHamzaAziz/real-estate-website-mern'}
-            className='border-slate-500 hover:shadow-slate-600'
+            className='border-slate-500'
           />
           <SingleProject
             title={'Blogging Website'}
             description={'This web application was developed using MERN stack. It provides a platform for users to create, read, update and delete blog posts. Each blog post has a title, summary, image and blog content. For this users have to first go through authentication process which is acheived using JSON Web Tokens or simply JWT. Moreover I also added a rich text editor React Quill so that users can add content in their desired format.'}
             githubLink={'https://github.com/IamHamzaAziz/blogging-website-mern'}
-            className='border-red-600 hover:shadow-red-600'
+            className='border-red-600'
           />
           <SingleProject
             title={'Events Sharing Website'}
             description={'In this events app, I utilized React and Tailwind CSS for the frontend, and Django along with the Django REST Framework for the backend. The application allows authenticated users to add, update and delete events, while all users can view event listings and details. Additionally, the app features event search functionality and filtering by category for enhanced user experience.'}
             githubLink={'https://github.com/IamHamzaAziz/events-webapp-django-react'}
-            className='border-green-600 hover:shadow-green-600'
+            className='border-green-600'
           />
           <SingleProject
             title={'Recipe Sharing Website'}
             description={'This web application enables users to share and save recipes, similar to saving posts on social media platforms. It features user authentication, CRUD operations, and image uploads. Users can also apply filters to find specific recipes. For enhanced security, UUIDs were used instead of regular IDs. The project was built using Django and styled with Tailwind CSS.'}
             githubLink={'https://github.com/IamHamzaAziz/flavor-quest-django'}
-            className='border-blue-600 hover:shadow-blue-600'
+            className='border-blue-600'
           />
           <SingleProject
             title={'Expenses Tracking Website'}
             description={'Developed with React and TypeScript for the frontend and Firebase as the backend, this website enables users to authenticate using email/password or Google, record income and expense transactions, and store them in Firestore. It also provides a comprehensive view of the user\'s total balance, with detailed breakdowns of income and expenses.'}
             githubLink={'https://github.com/IamHamzaAziz/expense-tracker-react-firebase'}
-            className='border-yellow-600 hover:shadow-yellow-600'
+            className='border-yellow-600'
           />
         </Marquee>
       </div>
