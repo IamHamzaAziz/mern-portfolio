@@ -12,16 +12,16 @@ const Hero = () => {
             />
 
             <h1 className='text-xl sm:text-3xl font-bold text-center mt-8'>
-                Hi, I'm <span className='bg-gradient-to-r from-gray-500 via-gray-50 to-gray-500 bg-clip-text text-transparent'>Hamza Aziz</span><br />
+                Hi, I am <span className='bg-gradient-to-r from-gray-500 via-gray-50 to-gray-500 bg-clip-text text-transparent'>Hamza Aziz</span><br />
                 <TypeAnimation
                     sequence={[
-                        'I\'m a Software Engineer',
+                        'I am a Software Engineer',
                         2000,
-                        'I\'m a MERN Developer',
+                        'I am MERN Developer',
                         1000,
-                        'I\'m a Laravel Developer',
+                        'I am Laravel Developer',
                         1000,
-                        'I\'m a Django Developer',
+                        'I am Django Developer',
                         1000
                     ]}
                     wrapper="span"
