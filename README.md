@@ -10,4 +10,5 @@ This portofolio features following sections
 - **Home**: Introduction with typing animations.
 - **Projects**: A sliding showcase of my work.
 - **Skills**: Technologies I excel in.
+- **Education**: Educational institutes where I studied.
 - **Contact**: A form for sending direct inquiries. I get an email right after you fill out this form. This email tells me your name, email and message you entered.
