@@ -20,7 +20,7 @@ const Projects = () => {
           />
           <SingleProject
             title={'Blogging Website'}
-            description={'This web application was developed using MERN stack. It provides a platform for users to create, read, update and delete blog posts. Each blog post has a title, summary, image and blog content. For this users have to first go through authentication process which is acheived using JSON Web Tokens or simply JWT. Moreover I also added a rich text editor React Quill so that users can add content in their desired format.'}
+            description={'This web application was developed using MERN stack. It provides a platform for users to create, read, update and delete blog posts. Each blog post has a title, summary, image and blog content. For this users have to first go through authentication process which is achieved using JSON Web Tokens or simply JWT. Moreover I also added a rich text editor React Quill so that users can add content in their desired format.'}
             githubLink={'https://github.com/IamHamzaAziz/blogging-website-mern'}
             className='border-red-600'
           />
@@ -51,31 +51,31 @@ const Projects = () => {
             title={'Real Estate Website'}
             description={'MERN app for creating and managing blogs, with JWT authentication and a rich text editor. Read more at below link.'}
             githubLink={'https://github.com/IamHamzaAziz/real-estate-website-mern'}
-            className='border-slate-500 hover:shadow-slate-600'
+            className='border-slate-500'
           />
           <SingleProject
             title={'Blogging Website'}
             description={'MERN app for creating and managing blogs, with JWT authentication and a rich text editor. Read more at below link.'}
             githubLink={'https://github.com/IamHamzaAziz/blogging-website-mern'}
-            className='border-red-600 hover:shadow-red-600'
+            className='border-red-600'
           />
           <SingleProject
             title={'Events Sharing Website'}
             description={'A React and Django app for managing events, with search and filtering features. Read more at below link.'}
             githubLink={'https://github.com/IamHamzaAziz/events-webapp-django-react'}
-            className='border-green-600 hover:shadow-green-600'
+            className='border-green-600'
           />
           <SingleProject
             title={'Recipe Sharing Website'}
             description={'A recipe-sharing platform with authentication, CRUD, and filtering, built using Django. Read more at below link.'}
             githubLink={'https://github.com/IamHamzaAziz/flavor-quest-django'}
-            className='border-blue-600 hover:shadow-blue-600'
+            className='border-blue-600'
           />
           <SingleProject
             title={'Expenses Tracker'}
             description={'A website which tracks income, expenses and total balance of authenticated users with React, TypeScript and Firebase.'}
             githubLink={'https://github.com/IamHamzaAziz/expense-tracker-react-firebase'}
-            className='border-yellow-600 hover:shadow-yellow-600'
+            className='border-yellow-600'
           />
         </Marquee>
       </div>
