@@ -33,7 +33,7 @@ const Header = () => {
             href="https://linkedin.com/in/iamhamzaaziz"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-xl text-blue-600"
+            className="p-2 text-2xl text-blue-600"
             aria-label="LinkedIn"
           >
             <FaLinkedin />
@@ -45,10 +45,10 @@ const Header = () => {
             href="https://github.com/IamHamzaAziz"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-xl text-gray-300"
+            className="p-2 text-2xl text-gray-300"
             aria-label="GitHub"
           >
-            <FaGithub className="text-xl" />
+            <FaGithub />
           </motion.a>
         </div>
       </motion.nav>
