@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify';
 import { ThreeCircles } from 'react-loader-spinner'
 import { Contact as ContactIcon } from 'lucide-react';
+import { SendHorizontal } from 'lucide-react';
 
 const Contact = () => {
     const [name, setName] = useState('')
@@ -110,7 +111,7 @@ const Contact = () => {
                         ) : (
                             <>
                                 <span>Send</span>
-                                <SendHorizontal className width="18" height="18" />
+                                <SendHorizontal width="18" height="18" />
                             </>
                         )
                     }
