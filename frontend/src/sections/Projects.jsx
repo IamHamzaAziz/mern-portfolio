@@ -1,12 +1,13 @@
 import React from 'react'
 import SingleProject from '../components/SingleProject'
 import Marquee from "react-fast-marquee";
+import { FolderCode } from 'lucide-react'
 
 const Projects = () => {
   return (
     <div className='py-20 section-border-bottom'>
       <h1 className='text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3'>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-folder-kanban h-7 w-7 sm:h-10 sm:w-10"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" /><path d="M8 10v4" /><path d="M12 10v2" /><path d="M16 10v6" /></svg>
+        <FolderCode className="h-7 w-7 sm:h-10 sm:w-10" />
         <span>Key Projects</span>
       </h1>
 
