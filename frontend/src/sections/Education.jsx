@@ -27,7 +27,7 @@ const Education = () => {
         <div className='py-20 section-border-bottom'>
             <div className="container mx-auto px-10">
                 <h1 className='text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3'>
-                    <School className="h-7 w-7 sm:h-10 sm:w-10" />
+                    <School className="section-heading-icon" />
                     <span className='hidden sm:block'>Educational Journey</span>
                     <span className='block sm:hidden'>Education</span>
                 </h1>

@@ -22,7 +22,7 @@ const Skills = () => {
   return (
     <div className='py-20 section-border-bottom'>
       <h1 className='text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3'>
-        <Layers className="h-7 w-7 sm:h-10 sm:w-10" />
+        <Layers className="section-heading-icon" />
         <span>Key Skills</span>
       </h1>
 

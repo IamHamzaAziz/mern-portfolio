@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div className='py-20 section-border-bottom'>
       <h1 className='text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3'>
-        <FolderCode className="h-7 w-7 sm:h-10 sm:w-10" />
+        <FolderCode className="section-heading-icon" />
         <span>Key Projects</span>
       </h1>
 
