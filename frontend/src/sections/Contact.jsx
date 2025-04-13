@@ -15,7 +15,7 @@ const Contact = () => {
 
     const [loading, setLoading] = useState(false)
 
-    const sucess = (message = 'Your message is sent') => {
+    const success = (message = 'Your message is sent') => {
         toast.success(message, {
             position: "top-right",
             autoClose: 5000,
@@ -51,7 +51,7 @@ const Contact = () => {
             .then(response => {
                 if (response.status === 200) {
                     setLoading(false)
-                    sucess(response.data)
+                    success(response.data)
                     setName('')
                     setEmail('')
                     setMessage('')
