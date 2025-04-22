@@ -11,7 +11,7 @@ const Skills = () => {
       { src: "nextjs", name: "Next.js" },
       { src: "ts", name: "TypeScript" },
       { src: "tailwind", name: "TailwindCSS" },
-      { src: "bootstrap", name: "Bootstrap" },
+      { src: "jquery", name: "jQuery" },
     ],
     backend: [
       { src: "nodejs", name: "Node.js" },
