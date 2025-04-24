@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Layers, Code, Database, Wrench, Palette, Server, Grid } from 'lucide-react'
+import { LuLayers, LuCode, LuDatabase, LuWrench, LuServer, LuGrid3X3 } from 'react-icons/lu'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Skills = () => {
@@ -31,11 +31,11 @@ const Skills = () => {
   }
 
   const categories = [
-    { id: 'all', name: 'All Skills', icon: Grid },
-    { id: 'frontend', name: 'Frontend', icon: Code },
-    { id: 'backend', name: 'Backend', icon: Server },
-    { id: 'tools', name: 'Tools', icon: Wrench },
-    { id: 'database', name: 'Database', icon: Database },
+    { id: 'all', name: 'All Skills', icon: LuGrid3X3 },
+    { id: 'frontend', name: 'Frontend', icon: LuCode },
+    { id: 'backend', name: 'Backend', icon: LuServer },
+    { id: 'tools', name: 'Tools', icon: LuWrench },
+    { id: 'database', name: 'Database', icon: LuDatabase },
   ]
 
   const getFilteredSkills = () => {
@@ -48,7 +48,7 @@ const Skills = () => {
   return (
     <div className='py-20 section-border-bottom'>
       <h1 className='text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3'>
-        <Layers className="section-heading-icon" />
+        <LuLayers className="section-heading-icon" />
         <span>Key Skills</span>
       </h1>
 

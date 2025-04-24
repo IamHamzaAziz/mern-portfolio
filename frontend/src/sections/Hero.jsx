@@ -2,7 +2,7 @@ import React from 'react';
 import hero_image from '../assets/me.jpg';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
-import { Mail } from 'lucide-react'
+import { LuMail } from 'react-icons/lu';
 
 const Hero = () => {
     return (
@@ -59,7 +59,7 @@ const Hero = () => {
                     className="mt-4 bg-gradient-to-r from-primary-500 to-primary-700 text-gray-900 px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-primary-500/30 transition-all duration-300 bg-gray-200"
                 >
                     <a href="mailto:hamzaaziz086@gmail.com" target='_blank' rel="noopener noreferrer" className='flex items-center space-x-2'>
-                        <Mail />
+                        <LuMail size={24} />
                         <span>Get In Touch</span>
                     </a>
                 </motion.button>

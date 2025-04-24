@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { School } from 'lucide-react'
-import { MapPin, Calendar } from 'lucide-react'
+import { LuSchool, LuMapPin, LuCalendar } from "react-icons/lu";
 
 const schools = [
     {
@@ -27,7 +26,7 @@ const Education = () => {
         <div className='py-20 section-border-bottom'>
             <div className="container mx-auto px-10">
                 <h1 className='text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3'>
-                    <School className="section-heading-icon" />
+                    <LuSchool className="section-heading-icon" />
                     <span className='hidden sm:block'>Educational Journey</span>
                     <span className='block sm:hidden'>Education</span>
                 </h1>
@@ -41,12 +40,12 @@ const Education = () => {
                         >
                             <div className="p-6">
                                 <div className="flex items-center mb-4">
-                                    <MapPin className="w-6 h-6 mr-2 hidden sm:block" width="24" height="24" />
+                                    <LuMapPin className="w-6 h-6 mr-2 hidden sm:block" width="24" height="24" />
                                     <h3 className="text-xl font-semibold">{school.name}</h3>
                                 </div>
                                 <p className="mb-4">{school.degree}</p>
                                 <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
-                                    <Calendar className="w-4 h-4 mr-2" width="24" height="24" />
+                                    <LuCalendar className="w-4 h-4 mr-2" width="24" height="24" />
                                     <span>{school.year}</span>
                                 </div>
                             </div>

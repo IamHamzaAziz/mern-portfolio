@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CodeXml, X, Info } from 'lucide-react'
+import { LuCodeXml, LuX, LuInfo } from 'react-icons/lu'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const SingleProject = ({ title, description, githubLink, techStack = [] }) => {
@@ -18,7 +18,7 @@ const SingleProject = ({ title, description, githubLink, techStack = [] }) => {
             onClick={() => setIsExpanded(true)}
             className="flex items-center justify-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors w-full"
           >
-            <Info className='h-5 text-bold' />
+            <LuInfo className='h-5 text-bold' />
             <span>View Details</span>
           </button>
         </div>
@@ -42,7 +42,7 @@ const SingleProject = ({ title, description, githubLink, techStack = [] }) => {
                 onClick={() => setIsExpanded(false)}
                 className="absolute top-4 right-4 p-2 hover:bg-[#2a2f3d] rounded-full transition-colors text-gray-400 hover:text-white"
               >
-                <X size={24} />
+                <LuX size={24} />
               </button>
 
               <div className="space-y-6">
@@ -69,7 +69,7 @@ const SingleProject = ({ title, description, githubLink, techStack = [] }) => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
                 >
-                  <CodeXml size={20} />
+                  <LuCodeXml size={20} />
                   <span>View Source Code</span>
                 </a>
               </div>

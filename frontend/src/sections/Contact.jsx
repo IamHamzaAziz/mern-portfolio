@@ -5,8 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify';
 import { ThreeCircles } from 'react-loader-spinner'
-import { Contact as ContactIcon } from 'lucide-react';
-import { SendHorizontal } from 'lucide-react';
+import { LuContact, LuSendHorizontal } from "react-icons/lu";
 
 const Contact = () => {
     const [name, setName] = useState('')
@@ -70,7 +69,7 @@ const Contact = () => {
     return (
         <div className='py-20 section-border-bottom'>
             <h1 className='text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3'>
-                <ContactIcon className="section-heading-icon" />
+                <LuContact className="section-heading-icon" />
                 <span>Contact Me</span>
             </h1>
 
@@ -111,7 +110,7 @@ const Contact = () => {
                         ) : (
                             <>
                                 <span>Send</span>
-                                <SendHorizontal width="18" height="18" />
+                                <LuSendHorizontal width="18" height="18" />
                             </>
                         )
                     }
