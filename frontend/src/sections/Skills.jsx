@@ -62,7 +62,7 @@ const Skills = () => {
               className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full transition-all duration-300 ${
                 activeCategory === category.id
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
+                  : 'bg-gray-800 hover:bg-gray-700'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -84,7 +84,7 @@ const Skills = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="group relative bg-white dark:bg-gray-800 rounded-xl p-3 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-[140px] sm:w-[200px]"
+                className="group relative bg-gray-800 rounded-xl p-3 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-[140px] sm:w-[200px]"
               >
                 <div className="flex flex-col items-center">
                   <motion.img
@@ -93,7 +93,7 @@ const Skills = () => {
                     className="h-12 w-12 sm:h-16 sm:w-16 mb-2 sm:mb-4 transition-transform duration-300 group-hover:scale-110"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   />
-                  <h3 className="text-sm sm:text-lg font-semibold text-gray-800 dark:text-white text-center">
+                  <h3 className="text-sm sm:text-lg font-semibold text-white text-center">
                     {skill.name}
                   </h3>
                 </div>
