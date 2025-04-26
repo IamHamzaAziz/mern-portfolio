@@ -50,7 +50,7 @@ const Hero = () => {
                 </div>
 
                 <p className="text-gray-300 text-lg mb-8 max-w-2xl">
-                    I build exceptional digital experiences with modern technologies and clean code.
+                    I develop digital experiences with modern technologies and clean code
                 </p>
 
                 <motion.button
