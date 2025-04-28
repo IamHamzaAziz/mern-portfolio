@@ -14,7 +14,7 @@ const schools = [
     },
     {
         name: "Garrison Academy for Boys Lahore",
-        degree: "Matric With Computer Science",
+        degree: "Matric with Computer Science",
         year: "2019"
     }
 ]
