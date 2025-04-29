@@ -104,6 +104,14 @@ const Skills = () => {
           </AnimatePresence>
         </div>
       </div>
+
+      <div className="mt-16 text-center px-4">
+        <blockquote className="text-gray-400 italic text-lg sm:text-xl max-w-2xl mx-auto">
+          "The only true wisdom is in knowing you know nothing."
+        </blockquote>
+        <p className="text-gray-500 mt-2">- Socrates</p>
+        <p className="text-gray-300 font-bold mt-4 text-2xl">Always Learning</p>
+      </div>
     </div>
   )
 }
