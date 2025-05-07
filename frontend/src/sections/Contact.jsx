@@ -100,7 +100,7 @@ const Contact = () => {
 
                 <p className='text-center text-sm mt-3'>I will be notified of your message by an email. I'll respond to the email you provided.</p>
 
-                <button type='submit' className='mt-5 bg-blue-700 text-gray-200 w-full px-6 py-2 rounded-lg flex items-center justify-center space-x-2 h-10'>
+                <button type={loading ? 'button' : 'submit'} className='mt-5 bg-blue-700 text-gray-200 w-full px-6 py-2 rounded-lg flex items-center justify-center space-x-2 h-10'>
                     {
                         loading ? (
                             <ThreeCircles
