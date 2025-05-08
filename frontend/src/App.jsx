@@ -6,7 +6,6 @@ import Skills from './sections/Skills'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import Education from './sections/Education'
-import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
       <Education />
       <Contact />
       <Footer />
-      <Analytics />
     </>
   )
 }
