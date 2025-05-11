@@ -59,7 +59,7 @@ app.post("/api/contact-message", async (req, res) => {
       from: {
         address: process.env.SENDER_EMAIL,
       },
-      to: [process.env.RECIEVER_EMAIL],
+      to: [process.env.RECEIVER_EMAIL],
       subject: "New Message From Portfolio Contact Form",
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
