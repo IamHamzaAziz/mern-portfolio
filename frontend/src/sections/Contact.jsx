@@ -48,18 +48,18 @@ const Contact = () => {
         setLoading(true)
         axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/contact-message`, { name, email, message })
             .then(response => {
-                if (response.status === 200) {
-                    setLoading(false)
-                    success(response.data)
-                    setName('')
-                    setEmail('')
-                    setMessage('')
-                } else {
-                    setLoading(false)
-                    failure(response.data)
-                }
+                setLoading(false)
+                success(response.data)
+                setName('')
+                setEmail('')
+                setMessage('')
             })
             .catch(error => {
+                if (error.response.status === 400) {
+                    setLoading(false)
+                    failure(error.response.data)
+                    return
+                }
                 setLoading(false)
                 failure()
                 console.error(error)

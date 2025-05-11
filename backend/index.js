@@ -28,11 +28,11 @@ app.post("/api/contact-message", async (req, res) => {
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
-      return res.status(201).json("Enter all fields");
+      return res.status(400).json("Enter all fields");
     }
 
     if (!email.includes("@") || !email.includes(".")) {
-      return res.status(201).json("Enter a valid email");
+      return res.status(400).json("Enter a valid email");
     }
 
     await messageModel.create({
