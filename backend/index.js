@@ -23,6 +23,8 @@ app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI);
 
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 app.post("/api/contact-message", async (req, res) => {
   try {
     const { name, email, message } = req.body;
@@ -31,7 +33,7 @@ app.post("/api/contact-message", async (req, res) => {
       return res.status(400).json("Enter all fields");
     }
 
-    if (!email.includes("@") || !email.includes(".")) {
+    if (!emailRegex.test(email)) {
       return res.status(400).json("Enter a valid email");
     }
 
