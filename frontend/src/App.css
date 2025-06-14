@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .section-border-bottom {
     @apply border-b border-gray-700 rounded-ee-[50px] rounded-es-[50px] sm:rounded-ee-[125px] sm:rounded-es-[125px]
 }
@@ -8,8 +12,4 @@
 
 .input-field {
     @apply mt-5 w-full px-4 py-2 rounded-lg focus:outline-none text-black
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
 }
