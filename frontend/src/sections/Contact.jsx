@@ -68,7 +68,7 @@ const Contact = () => {
 
     return (
         <div className='py-20 section-border-bottom'>
-            <h1 className='text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3'>
+            <h1 className='section-heading'>
                 <LuContact className="section-heading-icon" />
                 <span>Contact Me</span>
             </h1>

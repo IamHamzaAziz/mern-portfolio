@@ -14,3 +14,7 @@ body {
 .input-field {
     @apply mt-5 w-full px-4 py-2 rounded-lg focus:outline-none text-black
 }
+
+.section-heading {
+    @apply text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3
+}

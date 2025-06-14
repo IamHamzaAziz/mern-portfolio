@@ -39,7 +39,7 @@ const Projects = () => {
   return (
     <section className="py-20 section-border-bottom">
       <div className="container mx-auto px-4">
-        <h1 className="text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3 mb-12">
+        <h1 className="section-heading mb-12">
           <LuFolderCode className='section-heading-icon' />
           <span>Key Projects</span>
         </h1>
