@@ -16,7 +16,7 @@ const SingleProject = ({ title, description, githubLink, techStack = [] }) => {
           <p className="text-gray-400 line-clamp-3 mb-4 text-sm">{description}</p>
           <button
             onClick={() => setIsExpanded(true)}
-            className="flex items-center justify-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors w-full"
+            className="flex items-center justify-center gap-2 px-4 py-2 bg-[#ec4e20] text-white rounded-lg transition-colors w-full"
           >
             <LuInfo className='h-5 text-bold' />
             <span>View Details</span>
@@ -67,7 +67,7 @@ const SingleProject = ({ title, description, githubLink, techStack = [] }) => {
                   href={githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#ec4e20] text-white rounded-lg transition-colors"
                 >
                   <LuCodeXml size={20} />
                   <span>View Source Code</span>

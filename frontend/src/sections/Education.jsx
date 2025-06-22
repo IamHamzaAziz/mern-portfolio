@@ -50,7 +50,7 @@ const Education = () => {
                                 </div>
                             </div>
                             <div
-                                className="h-2 bg-gray-700 transition-all duration-300 ease-in-out"
+                                className="h-2 bg-[#ec4e20] transition-all duration-300 ease-in-out"
                                 style={{ width: hoveredIndex === index ? '100%' : '0%' }}
                             />
                         </div>
