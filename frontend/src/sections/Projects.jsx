@@ -20,13 +20,13 @@ const Projects = () => {
       title: 'Events Sharing Website',
       description: 'A dynamic events platform where users can discover, create, and manage events. Features include category-based filtering, search functionality, and a responsive design for optimal user experience.',
       githubLink: 'https://github.com/IamHamzaAziz/events-webapp-django-react',
-      techStack: ['React', 'Django', 'Django REST Framework', 'PostgreSQL', 'Tailwind CSS']
+      techStack: ['React', 'Django', 'Django REST Framework', 'Tailwind CSS']
     },
     {
       title: 'Recipe Sharing Website',
       description: 'A social platform for food enthusiasts to share and discover recipes. The application features image uploads, recipe filtering, and secure user authentication using UUIDs.',
       githubLink: 'https://github.com/IamHamzaAziz/flavor-quest-django',
-      techStack: ['Django', 'PostgreSQL', 'Tailwind CSS', 'JavaScript']
+      techStack: ['Django', 'Tailwind CSS', 'JavaScript']
     },
     {
       title: 'Expenses Tracking Website',
