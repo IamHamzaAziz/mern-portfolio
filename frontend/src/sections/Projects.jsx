@@ -5,7 +5,7 @@ import { LuFolderCode } from 'react-icons/lu'
 const Projects = () => {
   const projects = [
     {
-      title: 'Real Estate Website',
+      title: 'SkyEstate',
       description: 'A comprehensive real estate platform featuring property listings with detailed information, OTP-based authentication, and an admin panel for managing properties and users. The platform includes rich text descriptions and a robust contact system.',
       githubLink: 'https://github.com/IamHamzaAziz/real-estate-website-mern',
       techStack: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Express', 'Shadcn UI', 'Tailwind CSS']
@@ -29,8 +29,8 @@ const Projects = () => {
       techStack: ['Django', 'Tailwind CSS', 'JavaScript']
     },
     {
-      title: 'Expenses Tracking Website',
-      description: 'A personal finance management tool that helps users track their income and expenses. Features include Google authentication, detailed transaction history, and comprehensive financial summaries.',
+      title: 'Expensy',
+      description: 'A personal finance management website that helps users track their income and expenses. Features include Google authentication, detailed transaction history, and comprehensive financial summaries.',
       githubLink: 'https://github.com/IamHamzaAziz/expense-tracker-react-firebase',
       techStack: ['React', 'TypeScript', 'Firebase', 'Firestore', 'Tailwind CSS']
     }
