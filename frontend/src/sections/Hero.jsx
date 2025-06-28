@@ -38,8 +38,6 @@ const Hero = () => {
                             'MERN Stack Developer',
                             1000,
                             'Laravel Developer',
-                            1000,
-                            'Django Developer',
                             1000
                         ]}
                         wrapper="span"
