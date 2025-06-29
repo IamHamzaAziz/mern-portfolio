@@ -33,8 +33,8 @@ const Skills = () => {
     { id: 'all', name: 'All Skills', icon: LuGrid3X3 },
     { id: 'frontend', name: 'Frontend', icon: LuCode },
     { id: 'backend', name: 'Backend', icon: LuServer },
-    { id: 'tools', name: 'Tools', icon: LuWrench },
     { id: 'database', name: 'Database', icon: LuDatabase },
+    { id: 'tools', name: 'Tools', icon: LuWrench },
   ]
 
   const getFilteredSkills = () => {
