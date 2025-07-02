@@ -5,12 +5,12 @@ const schools = [
     {
         name: "Lahore Garrison University",
         degree: "Bachelor of Science in Computer Science",
-        year: "2021 - 2025"
+        year: "2025"
     },
     {
         name: "Government College University Lahore",
         degree: "FSC Pre Engineering",
-        year: "2019 - 2021"
+        year: "2021"
     },
     {
         name: "Garrison Academy for Boys Lahore",
