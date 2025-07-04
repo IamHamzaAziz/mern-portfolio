@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { LuSchool, LuMapPin, LuCalendar } from "react-icons/lu";
+import { LuSchool, LuCalendar, LuUniversity } from "react-icons/lu";
+import { motion } from 'framer-motion';
 
 const schools = [
     {
@@ -20,41 +21,85 @@ const schools = [
 ]
 
 const Education = () => {
-    const [hoveredIndex, setHoveredIndex] = useState()
+    const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className='py-20 section-border-bottom'>
-            <div className="container mx-auto px-10">
-                <h1 className='section-heading'>
-                    <LuSchool className="section-heading-icon" />
-                    <span className='hidden sm:block'>Educational Journey</span>
-                    <span className='block sm:hidden'>Education</span>
-                </h1>
-                <div className="space-y-5 mt-14">
-                    {schools.map((school, index) => (
-                        <div
-                            key={index}
-                            className="rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl border border-gray-700 cursor-pointer"
-                            onMouseEnter={() => setHoveredIndex(index)}
-                            onMouseLeave={() => setHoveredIndex(null)}
+        <div className='py-20 section-border-bottom bg-gray-900 overflow-hidden'>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <motion.h1 
+                    className='section-heading text-4xl md:text-5xl font-bold mb-2'
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                >
+                    <LuUniversity className="section-heading-icon" />
+                    <span className='hidden sm:inline'>Educational Journey</span>
+                    <span className='sm:hidden'>Education</span>
+                </motion.h1>
+                
+                <div className="flex flex-col lg:flex-row gap-6 mt-14">
+                    <div className="lg:w-1/3 xl:w-1/4 relative">
+                        <div className="hidden lg:block absolute left-8 top-0 h-full w-0.5 bg-gray-300 dark:bg-gray-700 -z-10"></div>
+                        <div className="flex lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 custom-scrollbar">
+                            {schools.map((school, index) => (
+                                <motion.button
+                                    key={index}
+                                    className={`px-5 py-3 rounded-xl text-left transition-all flex-shrink-0 lg:flex-shrink ${activeIndex === index 
+                                        ? 'bg-[#ec4e20] text-white shadow-md' 
+                                        : 'bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 shadow-sm'}`}
+                                    onClick={() => setActiveIndex(index)}
+                                    whileTap={{ scale: 0.98 }}
+                                >
+                                    <div>
+                                        <div className="text-sm font-medium line-clamp-2">
+                                            {school.degree}
+                                        </div>
+                                        <div className={`text-xs mt-1 ${activeIndex === index ? 'text-white/80' : 'text-gray-500 dark:text-gray-400'}`}>
+                                            {school.year}
+                                        </div>
+                                    </div>
+                                </motion.button>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    <div className="lg:w-2/3 xl:w-3/4">
+                        <motion.div 
+                            className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700 h-full"
+                            key={activeIndex}
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5 }}
                         >
-                            <div className="p-6">
+                            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#ec4e20] to-[#ff8c5a]"></div>
+                            <div className="p-6 sm:p-8">
                                 <div className="flex items-center mb-4">
-                                    <LuMapPin className="w-6 h-6 mr-2 hidden sm:block" width="24" height="24" />
-                                    <h3 className="text-xl font-semibold">{school.name}</h3>
+                                    <div className="bg-[#ec4e20] text-white p-3 rounded-lg mr-4 flex-shrink-0">
+                                        <LuSchool className="w-5 h-5 sm:w-6 sm:h-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white">
+                                            {schools[activeIndex].name}
+                                        </h3>
+                                    </div>
                                 </div>
-                                <p className="mb-4">{school.degree}</p>
-                                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
-                                    <LuCalendar className="w-4 h-4 mr-2" width="24" height="24" />
-                                    <span>{school.year}</span>
+                                
+                                <div>
+                                    <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-4">
+                                        {schools[activeIndex].degree}
+                                    </p>
+                                    
+                                    <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm sm:text-base">
+                                        <LuCalendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
+                                        <span className="font-medium">{schools[activeIndex].year}</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div
-                                className="h-2 bg-[#ec4e20] transition-all duration-300 ease-in-out"
-                                style={{ width: hoveredIndex === index ? '100%' : '0%' }}
-                            />
-                        </div>
-                    ))}
+                            
+                            <div className="absolute bottom-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-[#ec4e20] opacity-10 rounded-tl-full"></div>
+                        </motion.div>
+                    </div>
                 </div>
             </div>
         </div>
