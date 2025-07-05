@@ -54,7 +54,7 @@ const Hero = () => {
                 <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="mt-4 bg-gradient-to-r from-primary-500 to-primary-700 text-gray-900 px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-primary-500/30 transition-all duration-300 bg-gray-200 hover:bg-[#ec4e20] hover:text-white"
+                    className="mt-4 px-8 py-3 rounded-full font-medium shadow-lg transition-all duration-300 bg-gray-200 text-gray-900 hover:bg-[#ec4e20] hover:text-white"
                 >
                     <a href="mailto:hamzaaziz086@gmail.com" target='_blank' rel="noopener noreferrer" className='flex items-center space-x-2'>
                         <LuMail size={24} />
