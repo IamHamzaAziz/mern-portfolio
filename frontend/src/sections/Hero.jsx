@@ -1,5 +1,5 @@
 import React from 'react';
-import hero_image from '../assets/me.jpg';
+import my_image from '../assets/me.jpg';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { LuMail } from 'react-icons/lu';
@@ -19,7 +19,7 @@ const Hero = () => {
                     className="mb-8 relative group"
                 >
                     <img
-                        src={hero_image}
+                        src={my_image}
                         alt="Hamza Aziz"
                         className="rounded-full h-48 w-48 border-4 border-gray-300 object-cover shadow-xl group-hover:border-white transition-all duration-300"
                     />
