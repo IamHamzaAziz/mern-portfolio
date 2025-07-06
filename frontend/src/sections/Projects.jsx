@@ -6,33 +6,32 @@ const Projects = () => {
   const projects = [
     {
       title: 'SkyEstate',
-      description: 'A comprehensive real estate platform featuring property listings with detailed information, OTP-based authentication, and an admin panel for managing properties and users. The platform includes rich text descriptions and a robust contact system.',
+      description: 'A comprehensive real estate website featuring property listings with images uploaded on Cloudinary, details, filtering, saving property options, OTP-based authentication, admin panel for managing properties, blogs and users. The platform includes rich text descriptions and a robust contact system.',
       githubLink: 'https://github.com/IamHamzaAziz/real-estate-website-mern',
       techStack: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Express', 'Shadcn UI', 'Tailwind CSS']
     },
     {
-      title: 'Blogging Website',
-      description: 'A feature-rich blogging platform that allows users to create and manage their blog posts with a modern rich text editor. The platform includes secure user authentication and a clean, responsive interface.',
+      title: 'Expensy',
+      description: 'A personal finance management website that helps users manage and track their income and expenses. Features include Google authentication, transaction history and comprehensive financial summaries.',
+      githubLink: 'https://github.com/IamHamzaAziz/expense-tracker-react-firebase',
+      techStack: ['React', 'TypeScript', 'Firebase', 'Firestore', 'Tailwind CSS']
+    },
+    {
+      title: 'AutoDealers Club',
+      description: 'Developed backend for an automobile mobile app devloped for dealers and brokers. Implemented JWT authentication, OTP based password reset, added complex filtering and enabled users to reserve vehicles for 48 hours.',
+      techStack: ['Laravel', 'MySQL', 'REST APIs']
+    },
+    {
+      title: 'Blogging Platform',
+      description: 'A feature-rich blogging website that allows users to create and manage their blog posts with a modern rich text editor. The platform includes secure user authentication and a clean, responsive interface.',
       githubLink: 'https://github.com/IamHamzaAziz/blogging-website-mern',
       techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'React Quill', 'Tailwind CSS']
     },
     {
-      title: 'Events Sharing Website',
-      description: 'A dynamic events platform where users can discover, create, and manage events. Features include category-based filtering, search functionality, and a responsive design for optimal user experience.',
-      githubLink: 'https://github.com/IamHamzaAziz/events-webapp-django-react',
-      techStack: ['React', 'Django', 'Django REST Framework', 'Tailwind CSS']
-    },
-    {
-      title: 'Recipe Sharing Website',
-      description: 'A social platform for food enthusiasts to share and discover recipes. The application features image uploads, recipe filtering, and secure user authentication using UUIDs.',
+      title: 'Flavor Quest',
+      description: 'A social platform for food enthusiasts to share and discover recipes. The application features image uploads, recipe filtering, saving recipes, secure user authentication and uses UUIDs for enhanced security.',
       githubLink: 'https://github.com/IamHamzaAziz/flavor-quest-django',
       techStack: ['Django', 'Tailwind CSS', 'JavaScript']
-    },
-    {
-      title: 'Expensy',
-      description: 'A personal finance management website that helps users track their income and expenses. Features include Google authentication, detailed transaction history, and comprehensive financial summaries.',
-      githubLink: 'https://github.com/IamHamzaAziz/expense-tracker-react-firebase',
-      techStack: ['React', 'TypeScript', 'Firebase', 'Firestore', 'Tailwind CSS']
     }
   ];
 

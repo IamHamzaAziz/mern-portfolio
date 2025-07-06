@@ -63,15 +63,19 @@ const SingleProject = ({ title, description, githubLink, techStack = [] }) => {
                   </div>
                 </div>
                 
-                <a
-                  href={githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#ec4e20] text-white rounded-lg transition-colors"
-                >
-                  <LuCodeXml size={20} />
-                  <span>View Source Code</span>
-                </a>
+                {
+                  githubLink && (
+                    <a
+                      href={githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-[#ec4e20] text-white rounded-lg transition-colors"
+                    >
+                      <LuCodeXml size={20} />
+                      <span>View Source Code</span>
+                    </a>   
+                  )
+                }
               </div>
             </motion.div>
           </motion.div>
