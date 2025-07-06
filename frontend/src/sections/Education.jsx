@@ -26,8 +26,8 @@ const Education = () => {
     return (
         <div className='py-20 section-border-bottom bg-gray-900 overflow-hidden'>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <motion.h1 
-                    className='section-heading text-4xl md:text-5xl font-bold mb-2'
+                <motion.h1
+                    className='section-heading'
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -37,7 +37,7 @@ const Education = () => {
                     <span className='hidden sm:inline'>Educational Journey</span>
                     <span className='sm:hidden'>Education</span>
                 </motion.h1>
-                
+
                 <div className="flex flex-col lg:flex-row gap-6 mt-14">
                     <div className="lg:w-1/3 xl:w-1/4 relative">
                         <div className="hidden lg:block absolute left-8 top-0 h-full w-0.5 bg-gray-300 dark:bg-gray-700 -z-10"></div>
@@ -45,8 +45,8 @@ const Education = () => {
                             {schools.map((school, index) => (
                                 <motion.button
                                     key={index}
-                                    className={`px-5 py-3 rounded-xl text-left transition-all flex-shrink-0 lg:flex-shrink ${activeIndex === index 
-                                        ? 'bg-[#ec4e20] text-white shadow-md' 
+                                    className={`px-5 py-3 rounded-xl text-left transition-all flex-shrink-0 lg:flex-shrink ${activeIndex === index
+                                        ? 'bg-[#ec4e20] text-white shadow-md'
                                         : 'bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 shadow-sm'}`}
                                     onClick={() => setActiveIndex(index)}
                                     whileTap={{ scale: 0.98 }}
@@ -63,9 +63,9 @@ const Education = () => {
                             ))}
                         </div>
                     </div>
-                    
+
                     <div className="lg:w-2/3 xl:w-3/4">
-                        <motion.div 
+                        <motion.div
                             className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700 h-full"
                             key={activeIndex}
                             initial={{ opacity: 0, x: 50 }}
@@ -84,19 +84,19 @@ const Education = () => {
                                         </h3>
                                     </div>
                                 </div>
-                                
+
                                 <div>
                                     <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-4">
                                         {schools[activeIndex].degree}
                                     </p>
-                                    
+
                                     <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm sm:text-base">
                                         <LuCalendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
                                         <span className="font-medium">{schools[activeIndex].year}</span>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div className="absolute bottom-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-[#ec4e20] opacity-10 rounded-tl-full"></div>
                         </motion.div>
                     </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import SingleProject from '../components/SingleProject'
 import { LuFolderCode } from 'react-icons/lu'
+import { motion } from 'framer-motion'
 
 const Projects = () => {
   const projects = [
@@ -38,10 +39,16 @@ const Projects = () => {
   return (
     <section className="py-20 section-border-bottom">
       <div className="container mx-auto px-4">
-        <h1 className="section-heading mb-12">
+        <motion.h1
+          className='section-heading mb-12'
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           <LuFolderCode className='section-heading-icon' />
           <span>Key Projects</span>
-        </h1>
+        </motion.h1>
 
         <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
           {projects.map((project, index) => (

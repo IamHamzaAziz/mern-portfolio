@@ -46,10 +46,16 @@ const Skills = () => {
 
   return (
     <div className='py-20 section-border-bottom'>
-      <h1 className='section-heading'>
+      <motion.h1
+        className='section-heading'
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
         <LuLayers className="section-heading-icon" />
         <span>Key Skills</span>
-      </h1>
+      </motion.h1>
 
       <div className="flex justify-center items-center gap-2 sm:gap-4 mt-8 sm:mt-14 flex-wrap px-4">
         {categories.map((category) => {
@@ -58,11 +64,10 @@ const Skills = () => {
             <motion.button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full transition-all duration-300 ${
-                activeCategory === category.id
-                  ? 'bg-[#ec4e20] text-white'
-                  : 'bg-gray-800 hover:bg-gray-700'
-              }`}
+              className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full transition-all duration-300 ${activeCategory === category.id
+                ? 'bg-[#ec4e20] text-white'
+                : 'bg-gray-800 hover:bg-gray-700'
+                }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -96,7 +101,7 @@ const Skills = () => {
                     {skill.name}
                   </h3>
                 </div>
-                
+
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </motion.div>
             ))}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { LuBriefcase, LuCalendar, LuCode, LuServer, LuShield, LuLayers } from "react-icons/lu";
+import { motion } from 'framer-motion';
 
 const experiences = [
   {
@@ -35,12 +36,18 @@ const Experience = () => {
     <div className='py-20 section-border-bottom' id="experience">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div>
-          <h1 className='section-heading'>
+          <motion.h1
+            className='section-heading'
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <LuBriefcase className="section-heading-icon" />
             <span>
               Experience
             </span>
-          </h1>
+          </motion.h1>
           <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
             Building solutions with cutting-edge technologies and modern practices
           </p>
@@ -86,7 +93,7 @@ const Experience = () => {
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {exp.highlights.map((item, i) => (
-                      <div 
+                      <div
                         key={i}
                         className="group relative bg-gray-800 p-5 rounded-lg border border-gray-700 hover:border-[#ec4e20]/30 transition-all duration-300"
                       >

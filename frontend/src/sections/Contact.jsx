@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify';
 import { ThreeCircles } from 'react-loader-spinner'
 import { LuContact, LuSendHorizontal } from "react-icons/lu";
+import { motion } from 'framer-motion';
 
 const Contact = () => {
     const [name, setName] = useState('')
@@ -68,10 +69,16 @@ const Contact = () => {
 
     return (
         <div className='py-20 section-border-bottom'>
-            <h1 className='section-heading'>
+            <motion.h1
+                className='section-heading'
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+            >
                 <LuContact className="section-heading-icon" />
                 <span>Contact Me</span>
-            </h1>
+            </motion.h1>
 
             <form onSubmit={submitForm} className='w-3/4 md:w-1/2 mx-auto mt-10'>
                 <input
