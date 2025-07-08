@@ -1,5 +1,5 @@
 import React from 'react';
-import { LuBriefcase, LuCalendar, LuCode, LuServer, LuShield, LuLayers } from "react-icons/lu";
+import { LuBriefcase, LuCalendar, LuCode, LuServer, LuShield, LuLayers, LuPuzzle } from "react-icons/lu";
 import { motion } from 'framer-motion';
 
 const experiences = [
@@ -88,7 +88,7 @@ const Experience = () => {
 
                 <div className="mt-10">
                   <div className="flex items-center gap-2 mb-4 text-gray-300">
-                    <LuCode size={18} />
+                    <LuPuzzle size={18} />
                     <h4 className="font-medium">Key Contributions</h4>
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
