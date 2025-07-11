@@ -40,14 +40,14 @@ const Education = () => {
 
                 <div className="flex flex-col lg:flex-row gap-6 mt-14">
                     <div className="lg:w-1/3 xl:w-1/4 relative">
-                        <div className="hidden lg:block absolute left-8 top-0 h-full w-0.5 bg-gray-300 dark:bg-gray-700 -z-10"></div>
+                        <div className="hidden lg:block absolute left-8 top-0 h-full w-0.5 bg-gray-700 -z-10"></div>
                         <div className="flex lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 custom-scrollbar">
                             {schools.map((school, index) => (
                                 <motion.button
                                     key={index}
                                     className={`px-5 py-3 rounded-xl text-left transition-all flex-shrink-0 lg:flex-shrink ${activeIndex === index
                                         ? 'bg-[#ec4e20] text-white shadow-md'
-                                        : 'bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 shadow-sm'}`}
+                                        : 'bg-gray-800 hover:bg-gray-700 shadow-sm'}`}
                                     onClick={() => setActiveIndex(index)}
                                     whileTap={{ scale: 0.98 }}
                                 >
@@ -55,7 +55,7 @@ const Education = () => {
                                         <div className="text-sm font-medium line-clamp-2">
                                             {school.degree}
                                         </div>
-                                        <div className={`text-xs mt-1 ${activeIndex === index ? 'text-white/80' : 'text-gray-500 dark:text-gray-400'}`}>
+                                        <div className={`text-xs mt-1 ${activeIndex === index ? 'text-white/80' : 'text-gray-400'}`}>
                                             {school.year}
                                         </div>
                                     </div>
@@ -66,7 +66,7 @@ const Education = () => {
 
                     <div className="lg:w-2/3 xl:w-3/4">
                         <motion.div
-                            className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700 h-full"
+                            className="relative bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-700 h-full"
                             key={activeIndex}
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -79,18 +79,18 @@ const Education = () => {
                                         <LuSchool className="w-5 h-5 sm:w-6 sm:h-6" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white">
+                                        <h3 className="text-xl sm:text-2xl font-bold text-white">
                                             {schools[activeIndex].name}
                                         </h3>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-4">
+                                    <p className="text-base sm:text-lg text-gray-300 mb-4">
                                         {schools[activeIndex].degree}
                                     </p>
 
-                                    <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm sm:text-base">
+                                    <div className="flex items-center text-gray-400 text-sm sm:text-base">
                                         <LuCalendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
                                         <span className="font-medium">{schools[activeIndex].year}</span>
                                     </div>
