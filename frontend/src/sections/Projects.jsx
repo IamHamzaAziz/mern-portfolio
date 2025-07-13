@@ -19,7 +19,7 @@ const Projects = () => {
     },
     {
       title: 'AutoDealers Club',
-      description: 'Developed backend for an automobile mobile app devloped for dealers and brokers. Implemented JWT authentication, OTP based password reset, added complex filtering and enabled users to reserve vehicles for 48 hours.',
+      description: 'Developed backend for an automobile mobile app developed for dealers and brokers. Implemented JWT authentication, OTP based password reset, added complex filtering and enabled users to reserve vehicles for 48 hours.',
       techStack: ['Laravel', 'MySQL', 'REST APIs']
     },
     {
