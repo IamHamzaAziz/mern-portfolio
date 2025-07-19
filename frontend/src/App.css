@@ -34,6 +34,10 @@ body {
   border-radius: 20px;
 }
 
+body::selection {
+    @apply bg-[#ec4e20] text-white
+}
+
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 12px;
