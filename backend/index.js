@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import messageModel from "./messageModel.js";
 import nodemailer from "nodemailer";
+import messageValidator from "./message.validator.js";
 
 dotenv.config();
 
@@ -23,24 +24,18 @@ app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI);
 
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
 app.post("/api/contact-message", async (req, res) => {
   try {
-    const { name, email, message } = req.body;
+    const { error, value } = messageValidator.validate(req.body);
 
-    if (!name || !email || !message) {
-      return res.status(400).json("Enter all fields");
-    }
-
-    if (!emailRegex.test(email)) {
-      return res.status(400).json("Enter a valid email");
+    if (error) {
+      return res.status(400).json(error.details[0].message);
     }
 
     await messageModel.create({
-      name: name,
-      email: email,
-      message: message,
+      name: value.name,
+      email: value.email,
+      message: value.message,
     });
 
     const transporter = nodemailer.createTransport({
@@ -66,9 +61,9 @@ app.post("/api/contact-message", async (req, res) => {
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
             <h2 style="color: #2E86C1;">New Message from Portfolio Contact Form</h2>
-            <p><strong>From:</strong> ${name} (<a href="mailto:${email}">${email}</a>)</p>
+            <p><strong>From:</strong> ${value.name} (<a href="mailto:${value.email}">${value.email}</a>)</p>
             <p><strong>Message:</strong></p>
-            <p style="background-color: #f9f9f9; padding: 10px; border-left: 4px solid #2E86C1;">${message}</p>
+            <p style="background-color: #f9f9f9; padding: 10px; border-left: 4px solid #2E86C1;">${value.message}</p>
             <hr style="border: none; border-top: 1px solid #ddd;">
             <p style="font-size: 12px; color: #777;">This message was sent from your portfolio contact form.</p>
         </div>
