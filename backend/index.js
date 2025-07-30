@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import messageModel from "./messageModel.js";
+import messageModel from "./message.model.js";
 import nodemailer from "nodemailer";
 import messageValidator from "./message.validator.js";
 
