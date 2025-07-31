@@ -56,13 +56,37 @@ app.post("/api/contact-message", async (req, res) => {
       to: [process.env.RECEIVER_EMAIL],
       subject: "New Message From Portfolio Contact Form",
       html: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-            <h2 style="color: #2E86C1;">New Message from Portfolio Contact Form</h2>
-            <p><strong>From:</strong> ${value.name} (<a href="mailto:${value.email}">${value.email}</a>)</p>
-            <p><strong>Message:</strong></p>
-            <p style="background-color: #f9f9f9; padding: 10px; border-left: 4px solid #2E86C1;">${value.message}</p>
-            <hr style="border: none; border-top: 1px solid #ddd;">
-            <p style="font-size: 12px; color: #777;">This message was sent from your portfolio contact form.</p>
+        <div style="font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+          <!-- Header -->
+          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px 20px; text-align: center;">
+            <h1 style="margin: 0; color: white; font-size: 24px; font-weight: 600;">New Message from Portfolio</h1>
+          </div>
+          
+          <!-- Content -->
+          <div style="padding: 30px;">
+            <!-- Sender Info -->
+            <div style="margin-bottom: 20px;">
+              <p style="margin: 0 0 8px; font-size: 15px; color: #4a5568;">
+                <strong style="display: inline-block; width: 60px;">Name:</strong> ${value.name}
+              </p>
+              <p style="margin: 0; font-size: 15px; color: #4a5568;">
+                <strong style="display: inline-block; width: 60px;">Email:</strong> 
+                <a href="mailto:${value.email}" style="color: #667eea; text-decoration: none;">${value.email}</a>
+              </p>
+            </div>
+            
+            <!-- Message -->
+            <div style="background-color: #f8fafc; border-radius: 6px; padding: 20px; margin-bottom: 25px; border-left: 4px solid #667eea;">
+              <p style="margin: 0; color: #4a5568; line-height: 1.6;">${value.message}</p>
+            </div>
+            
+            <!-- Action Button -->
+            <div style="text-align: center;">
+              <a href="mailto:${value.email}" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; padding: 12px 24px; border-radius: 4px; font-weight: 500; font-size: 14px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                Reply to ${value.name}
+              </a>
+            </div>
+          </div>
         </div>
     `,
     };
