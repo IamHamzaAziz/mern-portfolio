@@ -77,7 +77,7 @@ app.post("/api/contact-message", async (req, res) => {
             
             <!-- Message -->
             <div style="background-color: #f8fafc; border-radius: 6px; padding: 20px; margin-bottom: 25px; border-left: 4px solid #667eea;">
-              <p style="margin: 0; color: #4a5568; line-height: 1.6;">${value.message}</p>
+              <p style="margin: 0; color: #4a5568; line-height: 1.6; white-space: pre-line;">${value.message}</p>
             </div>
             
             <!-- Action Button -->
