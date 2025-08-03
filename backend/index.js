@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import messageModel from "./message.model.js";
 import nodemailer from "nodemailer";
 import messageValidator from "./message.validator.js";
+import { rateLimit } from 'express-rate-limit'
 
 dotenv.config();
 
@@ -18,6 +19,13 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use(express.json());
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limiting each IP to 100 requests per windowMs
+  message: "Too many requests from this IP, try again after 15 minutes"
+})
+app.use(limiter)
 
 mongoose.connect(process.env.MONGODB_URI);
 
