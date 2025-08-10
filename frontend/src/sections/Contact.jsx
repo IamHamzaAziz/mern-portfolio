@@ -7,11 +7,10 @@ import { Bounce } from 'react-toastify';
 import { ThreeCircles } from 'react-loader-spinner'
 import { LuContact, LuSendHorizontal } from "react-icons/lu";
 import { motion } from 'framer-motion';
+import { useForm } from 'react-hook-form'
 
 const Contact = () => {
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [message, setMessage] = useState('')
+    const { register, handleSubmit, reset } = useForm()
 
     const [loading, setLoading] = useState(false)
 
@@ -43,17 +42,17 @@ const Contact = () => {
         })
     }
 
-    const submitForm = (e) => {
-        e.preventDefault()
-
+    const submitForm = (data) => {
         setLoading(true)
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/contact-message`, { name, email, message })
+        axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/contact-message`, data)
             .then(response => {
                 setLoading(false)
                 success(response.data)
-                setName('')
-                setEmail('')
-                setMessage('')
+                // setName('')
+                // setEmail('')
+                // setMessage('')
+                reset()
+
             })
             .catch(error => {
                 if (error.response.status === 400) {
@@ -80,27 +79,24 @@ const Contact = () => {
                 <span>Contact Me</span>
             </motion.h1>
 
-            <form onSubmit={submitForm} className='w-3/4 md:w-1/2 mx-auto mt-10'>
+            <form onSubmit={handleSubmit(submitForm)} className='w-3/4 md:w-1/2 mx-auto mt-10'>
                 <input
                     type="text"
-                    placeholder='Your Name'
-                    value={name}
-                    onChange={e => setName(e.target.value)}
-                    className='input-field'
+                    placeholder="Your Name"
+                    {...register('name')}
+                    className="input-field"
                     required
                 />
                 <input
                     type="email"
                     placeholder='Your Email'
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
+                    {...register('email')}
                     className='input-field'
                     required
                 />
                 <textarea
                     placeholder='Your Message'
-                    value={message}
-                    onChange={e => setMessage(e.target.value)}
+                    {...register('message')}
                     className='input-field h-20'
                     required
                 />
