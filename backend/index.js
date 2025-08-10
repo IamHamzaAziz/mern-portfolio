@@ -115,4 +115,6 @@ app.post("/api/contact-message", async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT, () => {
+  console.log(`Running on port ${process.env.PORT}`)
+});
