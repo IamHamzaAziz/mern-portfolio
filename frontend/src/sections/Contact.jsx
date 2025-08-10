@@ -48,9 +48,6 @@ const Contact = () => {
             .then(response => {
                 setLoading(false)
                 success(response.data)
-                // setName('')
-                // setEmail('')
-                // setMessage('')
                 reset()
 
             })
