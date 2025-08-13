@@ -37,8 +37,15 @@ body {
   border-radius: 20px;
 }
 
+/* Text Selection Styles */
 body::selection {
   @apply bg-[#ec4e20] text-white
+}
+
+/* Firefox */
+::-moz-selection {
+  background-color: #ec4e20;
+  color: white;
 }
 
 /* Custom Scrollbar Styles */
