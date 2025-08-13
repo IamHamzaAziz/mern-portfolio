@@ -19,24 +19,6 @@ body {
   @apply text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3
 }
 
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #ec4e20 transparent;
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-  height: 6px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #ec4e20;
-  border-radius: 20px;
-}
-
 /* Text Selection Styles */
 body::selection {
   @apply bg-[#ec4e20] text-white
