@@ -12,6 +12,11 @@ const Projects = () => {
       techStack: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Express', 'Shadcn UI', 'Tailwind CSS']
     },
     {
+      title: 'Legend EHR',
+      description: 'An advanced EHR system with Sequelize ORM APIs, supporting patient reports, insurance workflows and EMR management. Integrated UDI and barcode systems for streamlined medical device tracking and compliance.',
+      techStack: ['Express', 'Node.js', 'MySQL', 'Sequelize']
+    },
+    {
       title: 'Expensy',
       description: 'A personal finance management website that helps users manage and track their income and expenses. Features include Google authentication, transaction history and comprehensive financial summaries.',
       githubLink: 'https://github.com/IamHamzaAziz/expense-tracker-react-firebase',
@@ -21,12 +26,6 @@ const Projects = () => {
       title: 'AutoDealers Club',
       description: 'Developed backend for an automobile mobile app developed for dealers and brokers. Implemented JWT authentication, OTP based password reset, added complex filtering and enabled users to reserve vehicles for 48 hours.',
       techStack: ['Laravel', 'MySQL', 'REST APIs']
-    },
-    {
-      title: 'Blogging Platform',
-      description: 'A feature-rich blogging website that allows users to create and manage their blog posts with a modern rich text editor. The platform includes secure user authentication and a clean, responsive interface.',
-      githubLink: 'https://github.com/IamHamzaAziz/blogging-website-mern',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'React Quill', 'Tailwind CSS']
     },
     {
       title: 'Flavor Quest',
