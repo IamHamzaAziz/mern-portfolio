@@ -31,7 +31,7 @@ const Projects = () => {
       title: 'Flavor Quest',
       description: 'A social platform for food enthusiasts to share and discover recipes. The application features image uploads, recipe filtering, saving recipes, secure user authentication and uses UUIDs for enhanced security.',
       githubLink: 'https://github.com/IamHamzaAziz/flavor-quest-django',
-      techStack: ['Django', 'Tailwind CSS', 'JavaScript']
+      techStack: ['Django', 'Tailwind CSS', 'SQLite']
     }
   ];
 
