@@ -39,7 +39,7 @@ const Projects = () => {
     <section className="py-20 section-border-bottom">
       <div className="container mx-auto px-4">
         <motion.h1
-          className='section-heading mb-12'
+          className='section-heading'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -48,8 +48,11 @@ const Projects = () => {
           <LuFolderCode className='section-heading-icon' />
           <span>Key Projects</span>
         </motion.h1>
+        <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
+          Showcasing hands-on experience through practical and impactful projects
+        </p>
 
-        <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto mt-12">
           {projects.map((project, index) => (
             <div key={index} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] min-w-[280px] max-w-[400px]">
               <SingleProject {...project} />

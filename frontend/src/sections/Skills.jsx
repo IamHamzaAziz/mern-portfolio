@@ -56,8 +56,11 @@ const Skills = () => {
         <LuLayers className="section-heading-icon" />
         <span>Key Skills</span>
       </motion.h1>
+      <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
+        Equipped with a strong foundation of modern tools and technologies
+      </p>
 
-      <div className="flex justify-center items-center gap-2 sm:gap-4 mt-8 sm:mt-14 flex-wrap px-4">
+      <div className="flex justify-center items-center gap-2 sm:gap-4 mt-12 flex-wrap px-4">
         {categories.map((category) => {
           const Icon = category.icon
           return (

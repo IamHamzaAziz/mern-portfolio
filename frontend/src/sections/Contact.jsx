@@ -76,7 +76,11 @@ const Contact = () => {
                 <span>Contact Me</span>
             </motion.h1>
 
-            <form onSubmit={handleSubmit(submitForm)} className='w-3/4 md:w-1/2 mx-auto mt-10'>
+            <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
+                Let’s connect and create something meaningful together
+            </p>
+
+            <form onSubmit={handleSubmit(submitForm)} className='w-3/4 md:w-1/2 mx-auto mt-12'>
                 <input
                     type="text"
                     placeholder="Your Name"
@@ -88,13 +92,13 @@ const Contact = () => {
                     type="email"
                     placeholder='Your Email'
                     {...register('email')}
-                    className='input-field'
+                    className='input-field mt-5'
                     required
                 />
                 <textarea
                     placeholder='Your Message'
                     {...register('message')}
-                    className='input-field h-20'
+                    className='input-field mt-5 h-20'
                     required
                 />
 

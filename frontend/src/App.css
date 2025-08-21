@@ -12,7 +12,7 @@ body {
 }
 
 .input-field {
-  @apply mt-5 w-full px-4 py-2 rounded-lg focus:outline-none text-black
+  @apply w-full px-4 py-2 rounded-lg focus:outline-none text-black
 }
 
 .section-heading {

@@ -37,8 +37,11 @@ const Education = () => {
                     <span className='hidden sm:inline'>Educational Journey</span>
                     <span className='sm:hidden'>Education</span>
                 </motion.h1>
+                <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
+                    A glimpse into my continuous journey of knowledge and growth
+                </p>
 
-                <div className="flex flex-col lg:flex-row gap-6 mt-14">
+                <div className="flex flex-col lg:flex-row gap-6 mt-12">
                     <div className="lg:w-1/3 xl:w-1/4 relative">
                         <div className="hidden lg:block absolute left-8 top-0 h-full w-0.5 bg-gray-700 -z-10"></div>
                         <div className="flex lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 custom-scrollbar">
