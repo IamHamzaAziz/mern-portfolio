@@ -35,23 +35,21 @@ const Experience = () => {
   return (
     <div className='py-20 section-border-bottom' id="experience">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div>
-          <motion.h1
-            className='section-heading'
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <LuBriefcase className="section-heading-icon" />
-            <span>
-              Experience
-            </span>
-          </motion.h1>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
-            Building solutions with cutting-edge technologies and modern practices
-          </p>
-        </div>
+        <motion.h1
+          className='section-heading'
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <LuBriefcase className="section-heading-icon" />
+          <span>
+            Experience
+          </span>
+        </motion.h1>
+        <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
+          Building solutions with cutting-edge technologies and modern practices
+        </p>
 
         <div className="mt-12 space-y-10">
           {experiences.map((exp, index) => (
