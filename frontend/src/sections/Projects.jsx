@@ -48,6 +48,7 @@ const Projects = () => {
           <LuFolderCode className='section-heading-icon' />
           <span>Key Projects</span>
         </motion.h1>
+        
         <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
           Showcasing hands-on experience through practical and impactful projects
         </p>

@@ -56,6 +56,7 @@ const Skills = () => {
         <LuLayers className="section-heading-icon" />
         <span>Key Skills</span>
       </motion.h1>
+      
       <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
         Equipped with a strong foundation of modern tools and technologies
       </p>

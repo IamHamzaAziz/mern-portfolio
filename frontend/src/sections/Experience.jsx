@@ -47,6 +47,7 @@ const Experience = () => {
             Experience
           </span>
         </motion.h1>
+        
         <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
           Building solutions with cutting-edge technologies and modern practices
         </p>

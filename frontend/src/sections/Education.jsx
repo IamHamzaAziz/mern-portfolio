@@ -37,6 +37,7 @@ const Education = () => {
                     <span className='hidden sm:inline'>Educational Journey</span>
                     <span className='sm:hidden'>Education</span>
                 </motion.h1>
+                
                 <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
                     A glimpse into my continuous journey of knowledge and growth
                 </p>
