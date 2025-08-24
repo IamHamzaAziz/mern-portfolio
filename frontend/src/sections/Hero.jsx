@@ -1,4 +1,3 @@
-import React from 'react';
 import my_image from '../assets/me.jpg';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { LuLayers, LuCode, LuDatabase, LuWrench, LuServer, LuGrid3X3 } from 'react-icons/lu'
 import { motion, AnimatePresence } from 'framer-motion'
 

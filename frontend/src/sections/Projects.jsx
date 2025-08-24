@@ -1,4 +1,3 @@
-import React from 'react'
 import SingleProject from '../components/SingleProject'
 import { LuFolderCode } from 'react-icons/lu'
 import { motion } from 'framer-motion'

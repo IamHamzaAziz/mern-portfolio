@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { LuSchool, LuCalendar, LuUniversity } from "react-icons/lu";
 import { motion } from 'framer-motion';
 

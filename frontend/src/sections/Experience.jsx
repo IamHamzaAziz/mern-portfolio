@@ -1,4 +1,3 @@
-import React from 'react';
 import { LuBriefcase, LuCalendar, LuCode, LuServer, LuShield, LuLayers, LuPuzzle } from "react-icons/lu";
 import { motion } from 'framer-motion';
 
