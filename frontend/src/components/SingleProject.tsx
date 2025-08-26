@@ -2,7 +2,12 @@ import { useState } from 'react'
 import { LuCodeXml, LuX, LuInfo } from 'react-icons/lu'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const SingleProject = ({ title, description, githubLink, techStack = [] }) => {
+const SingleProject = ({ title, description, githubLink, techStack = [] }: {
+  title: string;
+  description: string;
+  githubLink?: string;
+  techStack: string[];
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (

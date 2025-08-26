@@ -3,7 +3,7 @@ import { LuLayers, LuCode, LuDatabase, LuWrench, LuServer, LuGrid3X3 } from 'rea
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState('all')
+  const [activeCategory, setActiveCategory] = useState<string>('all')
 
   const skills = {
     frontend: [

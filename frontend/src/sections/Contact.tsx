@@ -8,8 +8,14 @@ import { LuContact, LuSendHorizontal } from "react-icons/lu";
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form'
 
+type ContactForm = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 const Contact = () => {
-    const { register, handleSubmit, reset } = useForm()
+    const { register, handleSubmit, reset } = useForm<ContactForm>()
 
     const [loading, setLoading] = useState(false)
 
