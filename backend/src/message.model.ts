@@ -1,6 +1,12 @@
 import mongoose, { Schema, model } from "mongoose";
 
-const messageSchema = new Schema({
+export interface IMessage {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const messageSchema = new Schema<IMessage>({
     name: {
         type: String,
         required: true
@@ -17,5 +23,5 @@ const messageSchema = new Schema({
     timestamps: true 
 });
 
-const messageModel = model("Message", messageSchema)
+const messageModel = model<IMessage>("Message", messageSchema)
 export default messageModel

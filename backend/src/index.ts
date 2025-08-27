@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
@@ -26,9 +26,9 @@ const limiter = rateLimit({
 })
 app.use(limiter)
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI as string);
 
-app.post("/api/contact-message", async (req, res) => {
+app.post("/api/contact-message", async (req: Request, res: Response) => {
   try {
     const { error, value } = messageValidator.validate(req.body);
 
@@ -58,9 +58,10 @@ app.post("/api/contact-message", async (req, res) => {
 
     var mailOptions = {
       from: {
-        address: process.env.SENDER_EMAIL,
+        name: "Portfolio Contact Form",
+        address: process.env.SENDER_EMAIL as string,
       },
-      to: [process.env.RECEIVER_EMAIL],
+      to: [process.env.RECEIVER_EMAIL as string],
       subject: "New Message From Portfolio Contact Form",
       html: `
         <div style="font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
