@@ -51,18 +51,19 @@ const Contact = () => {
         setLoading(true)
         axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/contact-message`, data)
             .then(response => {
-                setLoading(false)
                 success(response.data)
                 reset()
             })
             .catch(error => {
-                setLoading(false)
                 if (error.response.status === 400) {
                     failure(error.response.data)
                     return
                 }
                 failure()
                 console.error(error)
+            })
+            .finally(() => {
+                setLoading(false)
             })
     }
 
