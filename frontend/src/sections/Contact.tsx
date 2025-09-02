@@ -54,15 +54,13 @@ const Contact = () => {
                 setLoading(false)
                 success(response.data)
                 reset()
-
             })
             .catch(error => {
+                setLoading(false)
                 if (error.response.status === 400) {
-                    setLoading(false)
                     failure(error.response.data)
                     return
                 }
-                setLoading(false)
                 failure()
                 console.error(error)
             })
