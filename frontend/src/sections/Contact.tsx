@@ -84,7 +84,7 @@ const Contact = () => {
                 Let’s connect and create something meaningful together
             </p>
 
-            <form onSubmit={handleSubmit(submitForm)} className='w-3/4 md:w-1/2 mx-auto mt-12'>
+            <form onSubmit={handleSubmit(submitForm)} className='w-3/4 mx-auto mt-12'>
                 <input
                     type="text"
                     placeholder="Your Name"
