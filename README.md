@@ -6,6 +6,7 @@ Welcome to my personal portfolio website's repository.
 ## Sections
 
 - **Home**: Introduction with typing animation.
+- **Experience**: My professional and practical experience.
 - **Projects**: A showcase of my work.
 - **Skills**: Technologies I excel in.
 - **Education**: Educational institutes where I studied.
