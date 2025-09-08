@@ -26,6 +26,7 @@ Welcome to my personal portfolio website's repository.
 - **Express.js** (Server Framework)
 - **MongoDB** (Database)
 - **Mongoose** (ODM)
+- **Joi** (Validator)
 - **Nodemailer** (Email Service)
 
 ### Deployment
