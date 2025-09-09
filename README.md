@@ -18,6 +18,7 @@ Welcome to my personal portfolio website's repository.
 - **React.js** (UI Technology)
 - **TailwindCSS** (Styling)
 - **Framer Motion** (Animations)
+- **React Hook Form** (Form Handling)
 - **React Icons** (Icon Library)
 - **Axios** (HTTP Client)
 
