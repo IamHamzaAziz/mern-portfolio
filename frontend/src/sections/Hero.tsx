@@ -20,7 +20,7 @@ const Hero = () => {
                     <img
                         src={my_image}
                         alt="Hamza Aziz"
-                        className="rounded-full h-48 w-48 border-4 border-gray-300 object-cover shadow-xl group-hover:border-white transition-all duration-300"
+                        className="rounded-full h-48 w-48 border-4 border-[#ec4e20] object-cover transition-all duration-300"
                     />
                     <div className="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary-500 opacity-0 group-hover:opacity-100 transition-all duration-300 animate-ping"></div>
                 </motion.div>
