@@ -22,7 +22,6 @@ const Hero = () => {
                         alt="Hamza Aziz"
                         className="rounded-full h-48 w-48 border-4 border-[#ec4e20] object-cover transition-all duration-300"
                     />
-                    <div className="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary-500 opacity-0 group-hover:opacity-100 transition-all duration-300 animate-ping"></div>
                 </motion.div>
 
                 <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold mb-4'>
