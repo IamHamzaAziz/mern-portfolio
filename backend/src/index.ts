@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import messageModel from "./message.model.js";
 import nodemailer from "nodemailer";
 import messageValidator from "./message.validator.js";
-import { rateLimit } from 'express-rate-limit'
+import { rateLimit } from 'express-rate-limit';
 
 dotenv.config();
 
