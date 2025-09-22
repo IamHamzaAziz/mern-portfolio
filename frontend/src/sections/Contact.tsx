@@ -7,6 +7,7 @@ import { ThreeCircles } from 'react-loader-spinner'
 import { LuContact, LuSendHorizontal } from "react-icons/lu";
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form'
+import { api } from '../api';
 
 type ContactForm = {
   name: string;
@@ -49,7 +50,7 @@ const Contact = () => {
 
     const submitForm = (data) => {
         setLoading(true)
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/contact-message`, data)
+        api.post(`${import.meta.env.VITE_BACKEND_URL}/api/contact-message`, data)
             .then(response => {
                 success(response.data)
                 reset()
