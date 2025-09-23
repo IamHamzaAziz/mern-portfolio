@@ -50,7 +50,7 @@ const Contact = () => {
 
     const submitForm = (data) => {
         setLoading(true)
-        api.post(`${import.meta.env.VITE_BACKEND_URL}/api/contact-message`, data)
+        api.post(`${import.meta.env.VITE_BACKEND_URL}/contact-message`, data)
             .then(response => {
                 success(response.data)
                 reset()
