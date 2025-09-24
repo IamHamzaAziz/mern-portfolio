@@ -48,9 +48,9 @@ const Contact = () => {
         })
     }
 
-    const submitForm = (data) => {
+    const submitForm = (data: ContactForm) => {
         setLoading(true)
-        api.post(`${import.meta.env.VITE_BACKEND_URL}/contact-message`, data)
+        api.post('/contact-message', data)
             .then(response => {
                 success(response.data)
                 reset()
