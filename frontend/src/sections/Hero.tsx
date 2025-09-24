@@ -5,7 +5,7 @@ import { LuMail } from 'react-icons/lu';
 
 const Hero = () => {
     return (
-        <section className="flex flex-col items-center pt-16 pb-20 px-4 sm:px-6 lg:px-8 section-border-bottom text-white overflow-x-hidden">
+        <section className="flex flex-col items-center pt-16 pb-20 px-4 sm:px-6 lg:px-8 section-border-bottom overflow-x-hidden text-gray-900 dark:text-white">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -45,14 +45,14 @@ const Hero = () => {
                     />
                 </div>
 
-                <p className="text-gray-300 text-lg mb-8 max-w-2xl">
+                <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 max-w-2xl">
                     I develop digital experiences with modern technologies and clean code
                 </p>
 
                 <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="mt-4 px-8 py-3 rounded-full font-medium shadow-lg transition-all duration-300 bg-gray-200 text-gray-900 hover:bg-[#ec4e20] hover:text-white"
+                    className="mt-4 px-8 py-3 rounded-full font-medium shadow-lg transition-all duration-300 bg-gray-200 text-gray-900 hover:bg-[#ec4e20] hover:text-white dark:bg-gray-800 dark:text-white dark:hover:bg-[#ec4e20]"
                 >
                     <a href="mailto:hamzaaziz086@gmail.com" target='_blank' rel="noopener noreferrer" className='flex items-center space-x-2'>
                         <LuMail size={24} />

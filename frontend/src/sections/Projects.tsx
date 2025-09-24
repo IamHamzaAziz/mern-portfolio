@@ -2,8 +2,15 @@ import SingleProject from '../components/SingleProject'
 import { LuFolderCode } from 'react-icons/lu'
 import { motion } from 'framer-motion'
 
+interface Project {
+  title: string;
+  description: string;
+  githubLink?: string;
+  techStack: string[];
+}
+
 const Projects = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       title: 'SkyEstate',
       description: 'A comprehensive real estate website featuring property listings with images uploaded on Cloudinary, details, filtering, saving property options, OTP-based authentication, admin panel for managing properties, blogs and users. The platform includes rich text descriptions and a robust contact system.',
@@ -38,7 +45,7 @@ const Projects = () => {
     <section className="py-20 section-border-bottom">
       <div className="container mx-auto px-4">
         <motion.h1
-          className='section-heading'
+          className='section-heading text-gray-900 dark:text-white'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -48,7 +55,7 @@ const Projects = () => {
           <span>Key Projects</span>
         </motion.h1>
         
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
+        <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mt-4">
           Showcasing hands-on experience through practical and impactful projects
         </p>
 

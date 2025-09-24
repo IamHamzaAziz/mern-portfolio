@@ -7,8 +7,20 @@ import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import Education from './sections/Education'
 import Experience from './sections/Experience'
+import { useThemeStore } from './store/ThemeStore'
+import { useEffect } from 'react'
 
 function App() {
+  const { isDarkMode } = useThemeStore()
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [isDarkMode])
+
   return (
     <>
       <Header />

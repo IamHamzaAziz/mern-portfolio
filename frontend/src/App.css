@@ -1,10 +1,5 @@
-body {
-  font-family: 'Montserrat', sans-serif;
-  @apply bg-gray-900 text-gray-200
-}
-
 .section-border-bottom {
-  @apply border-b border-gray-700 rounded-ee-[50px] rounded-es-[50px] sm:rounded-ee-[125px] sm:rounded-es-[125px]
+  @apply border-b border-gray-300 dark:border-gray-700 rounded-ee-[50px] rounded-es-[50px] sm:rounded-ee-[125px] sm:rounded-es-[125px]
 }
 
 .section-heading-icon {
@@ -20,11 +15,10 @@ body {
 }
 
 /* Text Selection Styles */
-body::selection {
+::selection {
   @apply bg-[#ec4e20] text-white
 }
 
-/* Firefox */
 ::-moz-selection {
   background-color: #ec4e20;
   color: white;
@@ -33,13 +27,13 @@ body::selection {
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 12px;
-  background: linear-gradient(135deg, #18181b 60%, #ec4e20 100%);
 }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #ec4e20 60%, #6366f1 100%);
   border-radius: 16px;
-  border: 3px solid #18181b;
+  border: 3px solid;
+  @apply border-gray-50 dark:border-gray-900;
   box-shadow: 0 2px 8px #ec4e2080;
   transition: background 0.3s;
 }
@@ -49,12 +43,17 @@ body::selection {
   box-shadow: 0 4px 16px #ec4e20cc;
 }
 
-::-webkit-scrollbar-corner {
-  background: #18181b;
+::-webkit-scrollbar-track {
+  @apply bg-gray-50 dark:bg-gray-900;
 }
 
 /* Firefox */
 html {
   scrollbar-width: thin;
-  scrollbar-color: #ec4e20 #18181b;
+  scrollbar-color: #ec4e20 #f9fafb;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-200;
 }
