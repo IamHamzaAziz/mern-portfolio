@@ -1,14 +1,9 @@
 import { useState } from 'react';
 import { LuSchool, LuCalendar, LuUniversity } from "react-icons/lu";
 import { motion } from 'framer-motion';
+import { EducationInterface } from '../types/Education';
 
-interface School {
-    name: string;
-    degree: string;
-    year: string;
-}
-
-const schools: School[] = [
+const schools: EducationInterface[] = [
     {
         name: "Lahore Garrison University",
         degree: "Bachelor of Science in Computer Science",

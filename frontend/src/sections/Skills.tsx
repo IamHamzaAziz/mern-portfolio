@@ -1,26 +1,12 @@
 import { useState } from 'react'
 import { LuLayers, LuCode, LuDatabase, LuWrench, LuServer, LuGrid3X3 } from 'react-icons/lu'
 import { motion, AnimatePresence } from 'framer-motion'
-
-interface Skill {
-  src: string;
-  name: string;
-}
-
-interface SkillsData {
-  [key: string]: Skill[];
-}
-
-interface Category {
-  id: string;
-  name: string;
-  icon: React.ComponentType<any>;
-}
+import { SkillInterface, SkillsDataInterface, CategoryInterface } from '../types/Skills'
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState<string>('all')
 
-  const skills: SkillsData = {
+  const skills: SkillsDataInterface = {
     frontend: [
       { src: "react", name: "React" },
       { src: "nextjs", name: "Next.js" },
@@ -44,7 +30,7 @@ const Skills = () => {
     ]
   }
 
-  const categories: Category[] = [
+  const categories: CategoryInterface[] = [
     { id: 'all', name: 'All Skills', icon: LuGrid3X3 },
     { id: 'frontend', name: 'Frontend', icon: LuCode },
     { id: 'backend', name: 'Backend', icon: LuServer },
@@ -52,11 +38,11 @@ const Skills = () => {
     { id: 'tools', name: 'Tools', icon: LuWrench },
   ]
 
-  const getFilteredSkills = (): Skill[] => {
+  const getFilteredSkills = (): SkillInterface[] => {
     if (activeCategory === 'all') {
       return Object.values(skills).flat()
     }
-    return skills[activeCategory as keyof SkillsData] || []
+    return skills[activeCategory as keyof SkillsDataInterface] || []
   }
 
   return (

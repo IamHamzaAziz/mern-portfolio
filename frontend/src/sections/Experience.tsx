@@ -1,26 +1,8 @@
 import { LuBriefcase, LuCalendar, LuCode, LuServer, LuShield, LuLayers, LuPuzzle } from "react-icons/lu";
 import { motion } from 'framer-motion';
+import { ExperienceItemInterface } from '../types/Experience';
 
-interface TechItem {
-  name: string;
-  description: string;
-}
-
-interface HighlightItem {
-  icon: JSX.Element;
-  title: string;
-  description: string;
-}
-
-interface ExperienceItem {
-  company: string;
-  position: string;
-  duration: string;
-  coreTech: TechItem[];
-  highlights: HighlightItem[];
-}
-
-const experiences: ExperienceItem[] = [
+const experiences: ExperienceItemInterface[] = [
   {
     company: "Axis Coding Solutions, Lahore",
     position: "Software Engineer",

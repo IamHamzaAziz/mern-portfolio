@@ -1,16 +1,10 @@
 import SingleProject from '../components/SingleProject'
 import { LuFolderCode } from 'react-icons/lu'
 import { motion } from 'framer-motion'
-
-interface Project {
-  title: string;
-  description: string;
-  githubLink?: string;
-  techStack: string[];
-}
+import { ProjectInterface } from '../types/Project'
 
 const Projects = () => {
-  const projects: Project[] = [
+  const projects: ProjectInterface[] = [
     {
       title: 'SkyEstate',
       description: 'A comprehensive real estate website featuring property listings with images uploaded on Cloudinary, details, filtering, saving property options, OTP-based authentication, admin panel for managing properties, blogs and users. The platform includes rich text descriptions and a robust contact system.',
