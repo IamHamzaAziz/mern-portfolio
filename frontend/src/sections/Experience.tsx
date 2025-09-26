@@ -1,42 +1,52 @@
-import { LuBriefcase, LuCalendar, LuCode, LuServer, LuShield, LuLayers, LuPuzzle } from "react-icons/lu";
-import { motion } from 'framer-motion';
-import { ExperienceItemInterface } from '../types/Experience';
+import {
+  LuBriefcase,
+  LuCalendar,
+  LuCode,
+  LuServer,
+  LuShield,
+  LuLayers,
+  LuPuzzle,
+} from 'react-icons/lu'
+import { motion } from 'framer-motion'
+import { ExperienceItemInterface } from '../types/Experience'
 
 const experiences: ExperienceItemInterface[] = [
   {
-    company: "Axis Coding Solutions, Lahore",
-    position: "Software Engineer",
-    duration: "Nov 2024 – Present",
+    company: 'Axis Coding Solutions, Lahore',
+    position: 'Software Engineer',
+    duration: 'Nov 2024 – Present',
     coreTech: [
-      { name: "MERN Stack", description: "Full-stack JavaScript solutions" },
-      { name: "Laravel", description: "Robust PHP backend systems" }
+      { name: 'MERN Stack', description: 'Full-stack JavaScript solutions' },
+      { name: 'Laravel', description: 'Robust PHP backend systems' },
     ],
     highlights: [
       {
         icon: <LuCode size={20} />,
-        title: "Full Stack Development",
-        description: "Building performant web applications using modern technologies"
+        title: 'Full Stack Development',
+        description:
+          'Building performant web applications using modern technologies',
       },
       {
         icon: <LuServer size={20} />,
-        title: "API Development",
-        description: "Designing and maintaining robust RESTful APIs"
+        title: 'API Development',
+        description: 'Designing and maintaining robust RESTful APIs',
       },
       {
         icon: <LuShield size={20} />,
-        title: "Security & Optimization",
-        description: "Implementing security best practices and performance enhancements"
-      }
-    ]
-  }
-];
+        title: 'Security & Optimization',
+        description:
+          'Implementing security best practices and performance enhancements',
+      },
+    ],
+  },
+]
 
 const Experience = () => {
   return (
-    <div className='py-20 section-border-bottom' id="experience">
+    <div className="py-20 section-border-bottom" id="experience">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h1
-          className='section-heading text-gray-900 dark:text-white'
+          className="section-heading text-gray-900 dark:text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -45,7 +55,7 @@ const Experience = () => {
           <LuBriefcase className="section-heading-icon" />
           <span>Experience</span>
         </motion.h1>
-        
+
         <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mt-4">
           Building solutions with cutting-edge technologies and modern practices
         </p>
@@ -79,11 +89,13 @@ const Experience = () => {
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2">
                     {exp.coreTech.map((tech, i) => (
-                      <div 
-                        key={i} 
+                      <div
+                        key={i}
                         className="bg-gray-100/50 dark:bg-gray-700/30 p-4 rounded-lg border border-gray-200 dark:border-gray-600"
                       >
-                        <h5 className="font-semibold text-[#ec4e20]">{tech.name}</h5>
+                        <h5 className="font-semibold text-[#ec4e20]">
+                          {tech.name}
+                        </h5>
                         <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                           {tech.description}
                         </p>
@@ -104,9 +116,7 @@ const Experience = () => {
                         className="group relative bg-white/30 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-[#ec4e20]/30 transition-all duration-300"
                       >
                         <div className="flex items-center gap-3 mb-3">
-                          <div className="text-[#ec4e20]">
-                            {item.icon}
-                          </div>
+                          <div className="text-[#ec4e20]">{item.icon}</div>
                           <h4 className="font-semibold text-gray-900 dark:text-white">
                             {item.title}
                           </h4>
@@ -134,7 +144,7 @@ const Experience = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience

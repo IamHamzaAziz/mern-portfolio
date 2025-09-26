@@ -1,33 +1,44 @@
 import { useState } from 'react'
-import { LuLayers, LuCode, LuDatabase, LuWrench, LuServer, LuGrid3X3 } from 'react-icons/lu'
+import {
+  LuLayers,
+  LuCode,
+  LuDatabase,
+  LuWrench,
+  LuServer,
+  LuGrid3X3,
+} from 'react-icons/lu'
 import { motion, AnimatePresence } from 'framer-motion'
-import { SkillInterface, SkillsDataInterface, CategoryInterface } from '../types/Skills'
+import {
+  SkillInterface,
+  SkillsDataInterface,
+  CategoryInterface,
+} from '../types/Skills'
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState<string>('all')
 
   const skills: SkillsDataInterface = {
     frontend: [
-      { src: "react", name: "React" },
-      { src: "nextjs", name: "Next.js" },
-      { src: "ts", name: "TypeScript" },
-      { src: "tailwind", name: "TailwindCSS" },
-      { src: "jquery", name: "jQuery" },
+      { src: 'react', name: 'React' },
+      { src: 'nextjs', name: 'Next.js' },
+      { src: 'ts', name: 'TypeScript' },
+      { src: 'tailwind', name: 'TailwindCSS' },
+      { src: 'jquery', name: 'jQuery' },
     ],
     backend: [
-      { src: "nodejs", name: "Node.js" },
-      { src: "express", name: "Express" },
-      { src: "laravel", name: "Laravel" },
+      { src: 'nodejs', name: 'Node.js' },
+      { src: 'express', name: 'Express' },
+      { src: 'laravel', name: 'Laravel' },
     ],
     database: [
-      { src: "mongodb", name: "MongoDB" },
-      { src: "mysql", name: "MySQL" },
+      { src: 'mongodb', name: 'MongoDB' },
+      { src: 'mysql', name: 'MySQL' },
     ],
     tools: [
-      { src: "git", name: "Git" },
-      { src: "github", name: "GitHub" },
-      { src: "figma", name: "Figma" },
-    ]
+      { src: 'git', name: 'Git' },
+      { src: 'github', name: 'GitHub' },
+      { src: 'figma', name: 'Figma' },
+    ],
   }
 
   const categories: CategoryInterface[] = [
@@ -46,9 +57,9 @@ const Skills = () => {
   }
 
   return (
-    <div className='py-20 section-border-bottom'>
+    <div className="py-20 section-border-bottom">
       <motion.h1
-        className='section-heading text-gray-900 dark:text-white'
+        className="section-heading text-gray-900 dark:text-white"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -57,13 +68,13 @@ const Skills = () => {
         <LuLayers className="section-heading-icon" />
         <span>Key Skills</span>
       </motion.h1>
-      
+
       <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mt-4">
         Equipped with a strong foundation of modern tools and technologies
       </p>
 
       <div className="flex justify-center items-center gap-2 sm:gap-4 mt-12 flex-wrap px-4">
-        {categories.map((category) => {
+        {categories.map(category => {
           const Icon = category.icon
           return (
             <motion.button
@@ -120,7 +131,9 @@ const Skills = () => {
           "The only true wisdom is in knowing you know nothing."
         </blockquote>
         <p className="text-gray-500 dark:text-gray-500 mt-2">- Socrates</p>
-        <p className="text-gray-700 dark:text-gray-300 font-bold mt-4 text-2xl">Always Learning</p>
+        <p className="text-gray-700 dark:text-gray-300 font-bold mt-4 text-2xl">
+          Always Learning
+        </p>
       </div>
     </div>
   )

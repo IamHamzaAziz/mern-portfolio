@@ -1,18 +1,18 @@
 export interface TechItemInterface {
-    name: string;
-    description: string;
+  name: string
+  description: string
 }
-  
+
 export interface HighlightItemInterface {
-    icon: JSX.Element;
-    title: string;
-    description: string;
+  icon: JSX.Element
+  title: string
+  description: string
 }
 
 export interface ExperienceItemInterface {
-    company: string;
-    position: string;
-    duration: string;
-    coreTech: TechItemInterface[];
-    highlights: HighlightItemInterface[];
+  company: string
+  position: string
+  duration: string
+  coreTech: TechItemInterface[]
+  highlights: HighlightItemInterface[]
 }

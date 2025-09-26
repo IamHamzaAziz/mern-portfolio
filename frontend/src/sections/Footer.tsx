@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className='py-10 px-5 text-center'>
+    <footer className="py-10 px-5 text-center">
       Developed using MERN Stack
     </footer>
   )

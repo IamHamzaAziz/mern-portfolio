@@ -1,14 +1,14 @@
-import { motion } from 'framer-motion';
-import { FaFileAlt, FaLinkedin, FaGithub, FaSun, FaMoon } from 'react-icons/fa';
-import { useThemeStore } from '../store/ThemeStore';
+import { motion } from 'framer-motion'
+import { FaFileAlt, FaLinkedin, FaGithub, FaSun, FaMoon } from 'react-icons/fa'
+import { useThemeStore } from '../store/ThemeStore'
 
 const Header = () => {
-  const isDarkMode = useThemeStore((state) => state.isDarkMode);
-  const toggleTheme = useThemeStore((state) => state.toggleTheme);
+  const isDarkMode = useThemeStore(state => state.isDarkMode)
+  const toggleTheme = useThemeStore(state => state.toggleTheme)
 
   return (
     <header className="w-full max-w-4xl mx-auto py-6 px-4 sm:px-6">
-      <motion.nav 
+      <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -22,7 +22,11 @@ const Header = () => {
             onClick={toggleTheme}
             className="flex items-center gap-2 px-4 py-2 rounded-full transition-colors duration-200 text-sm sm:text-base bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white"
           >
-            {isDarkMode ? <FaSun className="text-gray-300" /> : <FaMoon className="text-gray-700" />}
+            {isDarkMode ? (
+              <FaSun className="text-gray-300" />
+            ) : (
+              <FaMoon className="text-gray-700" />
+            )}
             {/* <span>{isDarkMode ? 'Light' : 'Dark'}</span> */}
           </motion.button>
 
@@ -70,7 +74,7 @@ const Header = () => {
         </div>
       </motion.nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

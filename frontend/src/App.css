@@ -1,22 +1,22 @@
 .section-border-bottom {
-  @apply border-b border-gray-300 dark:border-gray-700 rounded-ee-[50px] rounded-es-[50px] sm:rounded-ee-[125px] sm:rounded-es-[125px]
+  @apply border-b border-gray-300 dark:border-gray-700 rounded-ee-[50px] rounded-es-[50px] sm:rounded-ee-[125px] sm:rounded-es-[125px];
 }
 
 .section-heading-icon {
-  @apply h-7 w-7 sm:h-10 sm:w-10
+  @apply h-7 w-7 sm:h-10 sm:w-10;
 }
 
 .input-field {
-  @apply w-full px-4 py-2 rounded-lg focus:outline-none text-black
+  @apply w-full px-4 py-2 rounded-lg focus:outline-none text-black;
 }
 
 .section-heading {
-  @apply text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3
+  @apply text-2xl sm:text-4xl font-bold flex justify-center items-center space-x-3;
 }
 
 /* Text Selection Styles */
 ::selection {
-  @apply bg-[#ec4e20] text-white
+  @apply bg-[#ec4e20] text-white;
 }
 
 ::-moz-selection {

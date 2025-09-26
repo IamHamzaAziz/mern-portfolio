@@ -1,52 +1,52 @@
-import express, { Request, Response } from "express";
-import cors from "cors";
-import dotenv from "dotenv";
-import mongoose from "mongoose";
-import messageModel from "./message.model.js";
-import nodemailer from "nodemailer";
-import messageValidator from "./message.validator.js";
-import { rateLimit } from 'express-rate-limit';
+import express, { Request, Response } from 'express'
+import cors from 'cors'
+import dotenv from 'dotenv'
+import mongoose from 'mongoose'
+import messageModel from './message.model.js'
+import nodemailer from 'nodemailer'
+import messageValidator from './message.validator.js'
+import { rateLimit } from 'express-rate-limit'
 
-dotenv.config();
+dotenv.config()
 
-const app = express();
+const app = express()
 
 const corsOptions = {
   origin: process.env.FRONTEND_URL,
-  methods: ["POST"]
-};
-app.use(cors(corsOptions));
+  methods: ['POST'],
+}
+app.use(cors(corsOptions))
 
-app.use(express.json());
+app.use(express.json())
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // limiting each IP to 100 requests per windowMs
-  message: "Too many requests from this IP, try again after 15 minutes"
+  message: 'Too many requests from this IP, try again after 15 minutes',
 })
 app.use(limiter)
 
-mongoose.connect(process.env.MONGODB_URI as string);
+mongoose.connect(process.env.MONGODB_URI as string)
 
-app.post("/api/contact-message", async (req: Request, res: Response) => {
+app.post('/api/contact-message', async (req: Request, res: Response) => {
   try {
-    const { error, value } = messageValidator.validate(req.body);
+    const { error, value } = messageValidator.validate(req.body)
 
     if (error) {
-      return res.status(400).json(error.details[0].message);
+      return res.status(400).json(error.details[0].message)
     }
 
     await messageModel.create({
       name: value.name,
       email: value.email,
       message: value.message,
-    });
+    })
 
     const transporter = nodemailer.createTransport({
       service: process.env.SENDER_EMAIL_SERVICE,
       host: process.env.SENDER_EMAIL_HOST,
       tls: {
-        ciphers: "SSLv3",
+        ciphers: 'SSLv3',
       },
       port: 587,
       secure: false,
@@ -54,15 +54,15 @@ app.post("/api/contact-message", async (req: Request, res: Response) => {
         user: process.env.SENDER_EMAIL,
         pass: process.env.SENDER_EMAIL_PASSWORD,
       },
-    });
+    })
 
     var mailOptions = {
       from: {
-        name: "Portfolio Contact Form",
+        name: 'Portfolio Contact Form',
         address: process.env.SENDER_EMAIL as string,
       },
       to: [process.env.RECEIVER_EMAIL as string],
-      subject: "New Message From Portfolio Contact Form",
+      subject: 'New Message From Portfolio Contact Form',
       html: `
         <div style="font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
           <!-- Header -->
@@ -97,25 +97,25 @@ app.post("/api/contact-message", async (req: Request, res: Response) => {
           </div>
         </div>
     `,
-    };
+    }
 
     await new Promise((resolve, reject) => {
       transporter.sendMail(mailOptions, (err, info) => {
         if (err) {
-          console.error(err);
-          reject(err);
+          console.error(err)
+          reject(err)
         } else {
-          resolve(info);
+          resolve(info)
         }
-      });
-    });
+      })
+    })
 
-    res.json("Your message is sent");
+    res.json('Your message is sent')
   } catch (error) {
-    res.status(500).json("Cannot send message");
+    res.status(500).json('Cannot send message')
   }
-});
+})
 
 app.listen(process.env.PORT, () => {
   console.log(`Running on port ${process.env.PORT}`)
-});
+})

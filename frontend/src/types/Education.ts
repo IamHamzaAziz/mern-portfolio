@@ -1,5 +1,5 @@
 export interface EducationInterface {
-    name: string;
-    degree: string;
-    year: string;
+  name: string
+  degree: string
+  year: string
 }
