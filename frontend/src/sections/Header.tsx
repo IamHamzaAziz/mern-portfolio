@@ -27,7 +27,6 @@ const Header = () => {
             ) : (
               <FaMoon className="text-gray-700" />
             )}
-            {/* <span>{isDarkMode ? 'Light' : 'Dark'}</span> */}
           </motion.button>
 
           {/* Divider */}
