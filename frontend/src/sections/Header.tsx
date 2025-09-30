@@ -7,7 +7,7 @@ const Header = () => {
   const toggleTheme = useThemeStore(state => state.toggleTheme)
 
   return (
-    <header className="w-full max-w-4xl mx-auto py-6 px-4 sm:px-6">
+    <header className="w-full max-w-4xl mx-auto sticky top-6 z-50 px-4 sm:px-6">
       <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

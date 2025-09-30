@@ -5,7 +5,7 @@ import { LuMail } from 'react-icons/lu'
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center pt-16 pb-20 px-4 sm:px-6 lg:px-8 section-border-bottom overflow-x-hidden text-gray-900 dark:text-white">
+    <section className="flex flex-col items-center py-28 px-4 sm:px-6 lg:px-8 section-border-bottom overflow-x-hidden text-gray-900 dark:text-white">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
