@@ -77,7 +77,7 @@ const Contact = () => {
         <span>Contact Me</span>
       </motion.h1>
 
-      <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
+      <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mt-4">
         Let’s connect and create something meaningful together
       </p>
 
