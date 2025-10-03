@@ -25,7 +25,7 @@ const Hero = () => {
         </motion.div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
-          Hi, I'm <span className="text-[#ec4e20]">Hamza Aziz</span>
+          Hi, I'm <br className="sm:hidden" /><span className="text-[#ec4e20]">Hamza Aziz</span>
         </h1>
 
         <div className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8 h-12">
