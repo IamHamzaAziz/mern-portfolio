@@ -66,64 +66,69 @@ const Contact = () => {
 
   return (
     <div className="py-20 section-border-bottom">
-      <motion.h1
-        className="section-heading"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <LuContact className="section-heading-icon" />
-        <span>Contact Me</span>
-      </motion.h1>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.h1
+          className="section-heading"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <LuContact className="section-heading-icon" />
+          <span>Contact Me</span>
+        </motion.h1>
 
-      <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mt-4">
-        Let’s connect and create something meaningful together
-      </p>
-
-      <form onSubmit={handleSubmit(submitForm)} className="w-3/4 mx-auto mt-12">
-        <input
-          type="text"
-          placeholder="Your Name"
-          {...register('name')}
-          className="input-field"
-          required
-        />
-        <input
-          type="email"
-          placeholder="Your Email"
-          {...register('email')}
-          className="input-field mt-5"
-          required
-        />
-        <textarea
-          placeholder="Your Message"
-          {...register('message')}
-          className="input-field mt-5 h-20"
-          required
-        />
-
-        <p className="text-center text-sm mt-3">
-          I will be notified of your message by an email. I'll respond to the
-          email you provided.
+        <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mt-4">
+          Let’s connect and create something meaningful together
         </p>
 
-        <button
-          type={loading ? 'button' : 'submit'}
-          className="mt-5 bg-[#ec4e20] text-gray-200 w-full px-6 py-2 rounded-lg flex items-center justify-center space-x-2 h-10 disabled:cursor-not-allowed"
-          disabled={loading}
+        <form
+          onSubmit={handleSubmit(submitForm)}
+          className="w-full mx-auto mt-12"
         >
-          {loading ? (
-            <ThreeCircles color="white" height={20} />
-          ) : (
-            <>
-              <span>Send</span>
-              <LuSendHorizontal width="18" height="18" />
-            </>
-          )}
-        </button>
-        <ToastContainer />
-      </form>
+          <input
+            type="text"
+            placeholder="Your Name"
+            {...register('name')}
+            className="input-field"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            {...register('email')}
+            className="input-field mt-5"
+            required
+          />
+          <textarea
+            placeholder="Your Message"
+            {...register('message')}
+            className="input-field mt-5 h-20"
+            required
+          />
+
+          <p className="text-center text-sm mt-3">
+            I will be notified of your message by an email. I'll respond to the
+            email you provided.
+          </p>
+
+          <button
+            type={loading ? 'button' : 'submit'}
+            className="mt-5 bg-[#ec4e20] text-gray-200 w-full px-6 py-2 rounded-lg flex items-center justify-center space-x-2 h-10 disabled:cursor-not-allowed"
+            disabled={loading}
+          >
+            {loading ? (
+              <ThreeCircles color="white" height={20} />
+            ) : (
+              <>
+                <span>Send</span>
+                <LuSendHorizontal width="18" height="18" />
+              </>
+            )}
+          </button>
+          <ToastContainer />
+        </form>
+      </div>
     </div>
   )
 }
