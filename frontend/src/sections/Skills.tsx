@@ -58,82 +58,84 @@ const Skills = () => {
 
   return (
     <div className="py-20 section-border-bottom">
-      <motion.h1
-        className="section-heading text-gray-900 dark:text-white"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <LuLayers className="section-heading-icon" />
-        <span>Key Skills</span>
-      </motion.h1>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.h1
+          className="section-heading text-gray-900 dark:text-white"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <LuLayers className="section-heading-icon" />
+          <span>Key Skills</span>
+        </motion.h1>
 
-      <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mt-4">
-        Equipped with a strong foundation of modern tools and technologies
-      </p>
-
-      <div className="flex justify-center items-center gap-2 sm:gap-4 mt-12 flex-wrap px-4">
-        {categories.map(category => {
-          const Icon = category.icon
-          return (
-            <motion.button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full transition-all duration-300 ${
-                activeCategory === category.id
-                  ? 'bg-[#ec4e20] text-white'
-                  : 'bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Icon size={16} className="sm:w-5 sm:h-5 w-4 h-4" />
-              <span>{category.name}</span>
-            </motion.button>
-          )
-        })}
-      </div>
-
-      <div className="max-w-6xl mx-auto mt-8 sm:mt-12 px-2 sm:px-4">
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
-          <AnimatePresence mode="wait">
-            {getFilteredSkills().map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="group relative bg-white/50 dark:bg-gray-800/50 rounded-xl p-3 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-[140px] sm:w-[200px] backdrop-blur-sm border border-gray-200 dark:border-gray-700"
-              >
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    src={`https://skillicons.dev/icons?i=${skill.src}`}
-                    alt={skill.name}
-                    className="h-12 w-12 sm:h-16 sm:w-16 mb-2 sm:mb-4 transition-transform duration-300 group-hover:scale-110"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                  />
-                  <h3 className="text-sm sm:text-lg font-semibold text-gray-900 dark:text-white text-center">
-                    {skill.name}
-                  </h3>
-                </div>
-
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
-      </div>
-
-      <div className="mt-16 text-center px-4">
-        <blockquote className="text-gray-600 dark:text-gray-400 italic text-lg sm:text-xl max-w-2xl mx-auto">
-          "The only true wisdom is in knowing you know nothing."
-        </blockquote>
-        <p className="text-gray-500 dark:text-gray-500 mt-2">- Socrates</p>
-        <p className="text-gray-700 dark:text-gray-300 font-bold mt-4 text-2xl">
-          Always Learning
+        <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mt-4">
+          Equipped with a strong foundation of modern tools and technologies
         </p>
+
+        <div className="flex justify-center items-center gap-2 sm:gap-4 mt-12 flex-wrap">
+          {categories.map(category => {
+            const Icon = category.icon
+            return (
+              <motion.button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full transition-all duration-300 ${
+                  activeCategory === category.id
+                    ? 'bg-[#ec4e20] text-white'
+                    : 'bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Icon size={16} className="sm:w-5 sm:h-5 w-4 h-4" />
+                <span>{category.name}</span>
+              </motion.button>
+            )
+          })}
+        </div>
+
+        <div className="mt-8 sm:mt-12">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
+            <AnimatePresence mode="wait">
+              {getFilteredSkills().map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  className="group relative bg-white/50 dark:bg-gray-800/50 rounded-xl p-3 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-[140px] sm:w-[200px] backdrop-blur-sm border border-gray-200 dark:border-gray-700"
+                >
+                  <div className="flex flex-col items-center">
+                    <motion.img
+                      src={`https://skillicons.dev/icons?i=${skill.src}`}
+                      alt={skill.name}
+                      className="h-12 w-12 sm:h-16 sm:w-16 mb-2 sm:mb-4 transition-transform duration-300 group-hover:scale-110"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                    />
+                    <h3 className="text-sm sm:text-lg font-semibold text-gray-900 dark:text-white text-center">
+                      {skill.name}
+                    </h3>
+                  </div>
+
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
+        </div>
+
+        <div className="mt-16 text-center">
+          <blockquote className="text-gray-600 dark:text-gray-400 italic text-lg sm:text-xl max-w-2xl mx-auto">
+            "The only true wisdom is in knowing you know nothing."
+          </blockquote>
+          <p className="text-gray-500 dark:text-gray-500 mt-2">- Socrates</p>
+          <p className="text-gray-700 dark:text-gray-300 font-bold mt-4 text-2xl">
+            Always Learning
+          </p>
+        </div>
       </div>
     </div>
   )
