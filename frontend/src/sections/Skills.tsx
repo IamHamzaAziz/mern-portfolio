@@ -58,7 +58,7 @@ const Skills = () => {
 
   return (
     <div className="py-20 section-border-bottom">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container">
         <motion.h1
           className="section-heading text-gray-900 dark:text-white"
           initial={{ opacity: 0, y: 20 }}

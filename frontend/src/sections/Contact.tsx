@@ -66,7 +66,7 @@ const Contact = () => {
 
   return (
     <div className="py-20 section-border-bottom">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container">
         <motion.h1
           className="section-heading"
           initial={{ opacity: 0, y: 20 }}
