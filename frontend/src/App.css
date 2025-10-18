@@ -29,32 +29,9 @@
 }
 
 /* Custom Scrollbar Styles */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #ec4e20;
-  border-radius: 16px;
-  border: 3px solid;
-  @apply border-gray-50 dark:border-gray-900;
-  box-shadow: 0 2px 8px #ec4e2080;
-  transition: background 0.3s;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #ec4e20;
-  box-shadow: 0 4px 16px #ec4e20cc;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-gray-50 dark:bg-gray-900;
-}
-
-/* Firefox */
 html {
   scrollbar-width: thin;
-  scrollbar-color: #ec4e20 #f9fafb;
+  scrollbar-color: #ec4e20 #111827;;
 }
 
 body {
