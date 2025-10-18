@@ -19,8 +19,8 @@ const Skills = () => {
 
   const skills: SkillsDataInterface = {
     frontend: [
-      { src: 'react', name: 'React' },
       { src: 'nextjs', name: 'Next.js' },
+      { src: 'react', name: 'React' },
       { src: 'ts', name: 'TypeScript' },
       { src: 'tailwind', name: 'TailwindCSS' },
       { src: 'jquery', name: 'jQuery' },
