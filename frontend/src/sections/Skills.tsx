@@ -9,15 +9,15 @@ import {
 } from 'react-icons/lu'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  SkillInterface,
-  SkillsDataInterface,
-  CategoryInterface,
+  ISkill,
+  ISkillsData,
+  ICategory,
 } from '../types/Skills'
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState<string>('all')
 
-  const skills: SkillsDataInterface = {
+  const skills: ISkillsData = {
     frontend: [
       { src: 'nextjs', name: 'Next.js' },
       { src: 'react', name: 'React' },
@@ -41,7 +41,7 @@ const Skills = () => {
     ],
   }
 
-  const categories: CategoryInterface[] = [
+  const categories: ICategory[] = [
     { id: 'all', name: 'All Skills', icon: LuGrid3X3 },
     { id: 'frontend', name: 'Frontend', icon: LuCode },
     { id: 'backend', name: 'Backend', icon: LuServer },
@@ -49,11 +49,11 @@ const Skills = () => {
     { id: 'tools', name: 'Tools', icon: LuWrench },
   ]
 
-  const getFilteredSkills = (): SkillInterface[] => {
+  const getFilteredSkills = (): ISkill[] => {
     if (activeCategory === 'all') {
       return Object.values(skills).flat()
     }
-    return skills[activeCategory as keyof SkillsDataInterface] || []
+    return skills[activeCategory as keyof ISkillsData] || []
   }
 
   return (

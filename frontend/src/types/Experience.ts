@@ -1,18 +1,18 @@
-export interface TechItemInterface {
+export interface ITechItem {
   name: string
   description: string
 }
 
-export interface HighlightItemInterface {
+export interface IHighlightItem {
   icon: JSX.Element
   title: string
   description: string
 }
 
-export interface ExperienceItemInterface {
+export interface IExperienceItem {
   company: string
   position: string
   duration: string
-  coreTech: TechItemInterface[]
-  highlights: HighlightItemInterface[]
+  coreTech: ITechItem[]
+  highlights: IHighlightItem[]
 }

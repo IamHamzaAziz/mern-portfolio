@@ -1,10 +1,10 @@
 import SingleProject from '../components/SingleProject'
 import { LuFolderCode } from 'react-icons/lu'
 import { motion } from 'framer-motion'
-import { ProjectInterface } from '../types/Project'
+import { IProject } from '../types/Project'
 
 const Projects = () => {
-  const projects: ProjectInterface[] = [
+  const projects: IProject[] = [
     {
       title: 'SkyEstate',
       description:

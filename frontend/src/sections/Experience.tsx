@@ -8,9 +8,9 @@ import {
   LuPuzzle,
 } from 'react-icons/lu'
 import { motion } from 'framer-motion'
-import { ExperienceItemInterface } from '../types/Experience'
+import { IExperienceItem } from '../types/Experience'
 
-const experiences: ExperienceItemInterface[] = [
+const experiences: IExperienceItem[] = [
   {
     company: 'Axis Coding Solutions, Lahore',
     position: 'Software Engineer',

@@ -1,13 +1,13 @@
-export interface SkillInterface {
+export interface ISkill {
   src: string
   name: string
 }
 
-export interface SkillsDataInterface {
-  [key: string]: SkillInterface[]
+export interface ISkillsData {
+  [key: string]: ISkill[]
 }
 
-export interface CategoryInterface {
+export interface ICategory {
   id: string
   name: string
   icon: React.ComponentType<any>

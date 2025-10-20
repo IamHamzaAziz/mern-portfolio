@@ -8,10 +8,10 @@ import { LuContact, LuSendHorizontal } from 'react-icons/lu'
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { api } from '../api'
-import { ContactFormInterface } from '../types/ContactForm'
+import { IContactForm } from '../types/ContactForm'
 
 const Contact = () => {
-  const { register, handleSubmit, reset } = useForm<ContactFormInterface>()
+  const { register, handleSubmit, reset } = useForm<IContactForm>()
 
   const [loading, setLoading] = useState(false)
 
@@ -43,7 +43,7 @@ const Contact = () => {
     })
   }
 
-  const submitForm = (data: ContactFormInterface) => {
+  const submitForm = (data: IContactForm) => {
     setLoading(true)
     api
       .post('/contact-message', data)

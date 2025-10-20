@@ -1,4 +1,4 @@
-export interface ProjectInterface {
+export interface IProject {
   title: string
   description: string
   githubLink?: string
