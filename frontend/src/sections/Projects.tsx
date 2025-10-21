@@ -25,6 +25,14 @@ const Projects = () => {
       description:
         'An advanced EHR system with Sequelize ORM APIs, supporting patient reports, insurance workflows and EMR management. Integrated UDI and barcode systems for streamlined medical device tracking and compliance.',
       techStack: ['Express', 'Node.js', 'MySQL', 'Sequelize'],
+      liveLink: 'https://legendehr.com',
+    },
+    {
+      title: 'AutoDealers Club',
+      description:
+        'Developed backend for an automobile mobile app developed for dealers and brokers. Implemented JWT authentication, OTP based password reset, added complex filtering and enabled users to reserve vehicles for 48 hours.',
+      liveLink: 'https://autodealersclub.com',
+      techStack: ['Laravel', 'MySQL', 'REST APIs'],
     },
     {
       title: 'Expensy',
@@ -39,12 +47,6 @@ const Projects = () => {
         'Firestore',
         'Tailwind CSS',
       ],
-    },
-    {
-      title: 'AutoDealers Club',
-      description:
-        'Developed backend for an automobile mobile app developed for dealers and brokers. Implemented JWT authentication, OTP based password reset, added complex filtering and enabled users to reserve vehicles for 48 hours.',
-      techStack: ['Laravel', 'MySQL', 'REST APIs'],
     },
     {
       title: 'Flavor Quest',

@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { LuCodeXml, LuX, LuInfo } from 'react-icons/lu'
+import { LuCodeXml, LuX, LuInfo, LuSquareArrowOutUpRight } from 'react-icons/lu'
 import { motion, AnimatePresence } from 'framer-motion'
 
 interface SingleProjectProps {
   title: string
   description: string
   githubLink?: string
+  liveLink?: string
   techStack: string[]
 }
 
@@ -13,6 +14,7 @@ const SingleProject = ({
   title,
   description,
   githubLink,
+  liveLink,
   techStack = [],
 }: SingleProjectProps) => {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -96,6 +98,17 @@ const SingleProject = ({
                   >
                     <LuCodeXml size={20} />
                     <span>View Source Code</span>
+                  </a>
+                )}
+                {liveLink && (
+                  <a
+                    href={liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#ec4e20] text-white rounded-lg hover:bg-[#d84315] transition-colors"
+                  >
+                    <LuSquareArrowOutUpRight size={20} />
+                    <span>View Live Demo</span>
                   </a>
                 )}
               </div>
