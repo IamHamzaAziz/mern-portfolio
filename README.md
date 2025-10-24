@@ -1,7 +1,7 @@
 # My Portfolio Website
 
 Welcome to my personal portfolio website's repository.
-<br>You can visit the portfolio at [hamzaaziz-portfolio.vercel.app](https://hamzaaziz-portfolio.vercel.app/)
+<br>You can visit the portfolio at [hamzaaziz.me](https://hamzaaziz.me/)
 
 ## Sections
 
