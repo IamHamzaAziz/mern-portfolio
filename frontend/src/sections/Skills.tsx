@@ -29,6 +29,7 @@ const Skills = () => {
       { src: 'nodejs', name: 'Node.js' },
       { src: 'express', name: 'Express' },
       { src: 'laravel', name: 'Laravel' },
+      { src: 'redis', name: 'Redis' },
     ],
     database: [
       { src: 'mongodb', name: 'MongoDB' },
