@@ -55,7 +55,7 @@ const Hero = () => {
           className="mt-4 px-8 py-3 rounded-full font-medium shadow-lg transition-all duration-300 bg-gray-200 text-gray-900 hover:bg-[#ec4e20] hover:text-white dark:bg-gray-800 dark:text-white dark:hover:bg-[#ec4e20]"
         >
           <a
-            href="mailto:hamzaaziz086@gmail.com"
+            href="mailto:hamza@hamzaaziz.me"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-2"
