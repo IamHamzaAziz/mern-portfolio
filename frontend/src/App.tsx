@@ -1,5 +1,5 @@
 import './App.css'
-import Header from './sections/Header'
+import Header from './components/Header'
 import Hero from './sections/Hero'
 import Projects from './sections/Projects'
 import Skills from './sections/Skills'
