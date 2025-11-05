@@ -1,25 +1,7 @@
 import { useState } from 'react'
 import { LuSchool, LuCalendar, LuUniversity } from 'react-icons/lu'
 import { motion } from 'framer-motion'
-import { IEducation } from '../types/Education'
-
-const schools: IEducation[] = [
-  {
-    name: 'Lahore Garrison University',
-    degree: 'Bachelor of Science in Computer Science',
-    year: '2025',
-  },
-  {
-    name: 'Government College University Lahore',
-    degree: 'FSC Pre Engineering',
-    year: '2021',
-  },
-  {
-    name: 'Garrison Academy for Boys Lahore',
-    degree: 'Matric with Computer Science',
-    year: '2019',
-  },
-]
+import schools from '../data/Schools'
 
 const Education = () => {
   const [activeIndex, setActiveIndex] = useState(0)

@@ -1,45 +1,11 @@
 import {
   LuBriefcase,
   LuCalendar,
-  LuCode,
-  LuServer,
-  LuShield,
   LuLayers,
   LuPuzzle,
 } from 'react-icons/lu'
 import { motion } from 'framer-motion'
-import { IExperienceItem } from '../types/Experience'
-
-const experiences: IExperienceItem[] = [
-  {
-    company: 'Axis Coding Solutions, Lahore',
-    position: 'Software Engineer',
-    duration: 'Nov 2024 – Present',
-    coreTech: [
-      { name: 'MERN Stack', description: 'Full-stack JavaScript solutions' },
-      { name: 'Laravel', description: 'Robust PHP backend systems' },
-    ],
-    highlights: [
-      {
-        icon: <LuCode size={20} />,
-        title: 'Full Stack Development',
-        description:
-          'Building performant web applications using modern technologies',
-      },
-      {
-        icon: <LuServer size={20} />,
-        title: 'API Development',
-        description: 'Designing and maintaining robust RESTful APIs',
-      },
-      {
-        icon: <LuShield size={20} />,
-        title: 'Security & Optimization',
-        description:
-          'Implementing security best practices and performance enhancements',
-      },
-    ],
-  },
-]
+import experiences from '../data/Experiences'
 
 const Experience = () => {
   return (
