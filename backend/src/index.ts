@@ -4,8 +4,8 @@ import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import messageModel from './message.model.js'
 import nodemailer from 'nodemailer'
-import messageValidator from './message.validator.js'
 import { rateLimit } from 'express-rate-limit'
+import { validateMessage } from './message.validator.js'
 
 dotenv.config()
 
@@ -28,19 +28,11 @@ app.use(limiter)
 
 mongoose.connect(process.env.MONGODB_URI as string)
 
-app.post('/api/contact-message', async (req: Request, res: Response) => {
+app.post('/api/contact-message', validateMessage, async (req: Request, res: Response) => {
   try {
-    const { error, value } = messageValidator.validate(req.body)
+    const { name, email, message } = req.body
 
-    if (error) {
-      return res.status(400).json(error.details[0].message)
-    }
-
-    await messageModel.create({
-      name: value.name,
-      email: value.email,
-      message: value.message,
-    })
+    await messageModel.create({ name, email, message })
 
     const transporter = nodemailer.createTransport({
       service: process.env.SENDER_EMAIL_SERVICE,
@@ -75,23 +67,23 @@ app.post('/api/contact-message', async (req: Request, res: Response) => {
             <!-- Sender Info -->
             <div style="margin-bottom: 20px;">
               <p style="margin: 0 0 8px; font-size: 15px; color: #4a5568;">
-                <strong style="display: inline-block; width: 60px;">Name:</strong> ${value.name}
+                <strong style="display: inline-block; width: 60px;">Name:</strong> ${name}
               </p>
               <p style="margin: 0; font-size: 15px; color: #4a5568;">
                 <strong style="display: inline-block; width: 60px;">Email:</strong> 
-                <a href="mailto:${value.email}" style="color: #667eea; text-decoration: none;">${value.email}</a>
+                <a href="mailto:${email}" style="color: #667eea; text-decoration: none;">${email}</a>
               </p>
             </div>
             
             <!-- Message -->
             <div style="background-color: #f8fafc; border-radius: 6px; padding: 20px; margin-bottom: 25px; border-left: 4px solid #667eea;">
-              <p style="margin: 0; color: #4a5568; line-height: 1.6; white-space: pre-line;">${value.message}</p>
+              <p style="margin: 0; color: #4a5568; line-height: 1.6; white-space: pre-line;">${message}</p>
             </div>
             
             <!-- Action Button -->
             <div style="text-align: center;">
-              <a href="mailto:${value.email}" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; padding: 12px 24px; border-radius: 4px; font-weight: 500; font-size: 14px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-                Reply to ${value.name}
+              <a href="mailto:${email}" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; padding: 12px 24px; border-radius: 4px; font-weight: 500; font-size: 14px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                Reply to ${name}
               </a>
             </div>
           </div>
