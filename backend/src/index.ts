@@ -6,10 +6,13 @@ import messageModel from './message.model.js'
 import nodemailer from 'nodemailer'
 import { rateLimit } from 'express-rate-limit'
 import { validateMessage } from './message.validator.js'
+import helmet from 'helmet'
 
 dotenv.config()
 
 const app = express()
+
+app.use(helmet())
 
 const corsOptions = {
   origin: process.env.FRONTEND_URL,
