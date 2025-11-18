@@ -30,6 +30,13 @@ const limiter = rateLimit({
 app.use(limiter)
 
 mongoose.connect(process.env.MONGODB_URI as string)
+  .then(() => {
+    console.log('Connected to MongoDB')
+  })
+  .catch((error) => {
+    console.error('Error connecting to MongoDB:', error)
+    process.exit(1)
+  })
 
 app.post('/api/contact-message', validateMessage, async (req: Request, res: Response) => {
   try {
